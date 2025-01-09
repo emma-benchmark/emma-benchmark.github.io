@@ -308,7 +308,6 @@
         <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
           <p>
-            <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
             EMMA is composed of 2,788 problems, of which 1,796 are newly constructed, across four domains: math, physics, chemistry, and coding. The key statistics of EMMA are summarized in Table~\ref{tab:keystats}, and its composition is presented in Figure~\ref{fig:composition}. 
             To provide fine-grained insights into how MLLMs might fail in multimodal reasoning, we assign labels to each problem in our benchmark. These labels are either created by domain experts or assigned by GPT-4o and subsequently verified by experts. 
             As shown in Figure~\ref{fig:categories}, questions in EMMA assess a wide array of multimodal reasoning skills. For example, the pattern inference problem in math challenges models to identify and generalize visual patterns; the visual decomposition simulation problem in physics requires graphically decomposing forces to determine resultant effects; the reaction simulation problem in chemistry demands precise interpretation and simulation of electron movement; the 3D visualization problem in coding\footnote{Different from the other subjects in EMMA, coding questions can be assigned more than one category since our visualizations tend to employ multiple advanced techniques.} evaluates spatial imagination by requiring models to associate function calls with their corresponding 3D representations. 
@@ -334,7 +333,6 @@
 
           <p>
             All the data examples were divided into two subsets: testmini and test. 
-            <!-- @PAN TODO: add download links -->
             <ul>
               <li><b>testmini</b>: 1,000 examples used for model development, validation, or for those with limited computing resources.</li>
               <li><b>test</b>: 5,141 examples for standard evaluation. Notably,
@@ -357,13 +355,16 @@
         </div>
       </div>
     </div>
+    
+
 
 
 <section class="section" id="interactive-questions">
   <div class="container is-max-desktop">
     <div class="columns is-multiline is-centered">
       <div class="column is-12">
-        <h3 style="font-size: 1.2rem; font-weight: bold;">Example questions and answers, click on the image to display the answer.</h3>
+        <h2 class="title is-3">Interactive Answers</h2>
+        <p>Click on the image to display the answer.</p>
       </div>
       <!-- 第1个题目 -->
       <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
@@ -551,7 +552,7 @@
           </div>
           <div class="card-content">
             <div class="content answer" id="answer12" style="display: none;">
-              <p>这是第十二个答案内容。</p>
+              <p>Answer: C.</p>
             </div>
           </div>
         </div>
@@ -630,7 +631,7 @@
           </div>
           <div class="card-content">
             <div class="content answer" id="answer17" style="display: none;">
-              <p>这是第17个答案内容。</p>
+              <p>Answer: A.</p>
             </div>
           </div>
         </div>
@@ -646,7 +647,7 @@
           </div>
           <div class="card-content">
             <div class="content answer" id="answer18" style="display: none;">
-              <p>这是第18个答案内容。</p>
+              <p>Answer: D.</p>
             </div>
           </div>
         </div>
@@ -662,7 +663,7 @@
           </div>
           <div class="card-content">
             <div class="content answer" id="answer19" style="display: none;">
-              <p>这是第19个答案内容。</p>
+              <p>Answer: D.</p>
             </div>
           </div>
         </div>
