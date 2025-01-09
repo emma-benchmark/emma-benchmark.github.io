@@ -267,8 +267,18 @@ body {
   margin-top: 0;     /* 去除container顶部的外边距 */
 }
 
-/* 仅针对类为 .centered-text 的 p 标签应用居中样式 */
-.centered-text {
-  text-align: center;  /* 确保此段文本水平居中 */
-  margin: 0 auto;      /* 可选：删除段落的外边距，确保其居中 */
+.leaderboard-description {
+  text-align: center;   /* 水平居中 */
+  font-size: 16px;       /* 设置字体大小 */
+  margin-top: 10px;      /* 上边距 */
+}
+
+#pdf-carousel {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  /* 每个 box 最小宽度 300px，自动填充 */
+  gap: 20px;
+}
+
+.box {
+  width: 100%;
 }

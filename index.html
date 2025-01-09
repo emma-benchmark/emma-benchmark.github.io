@@ -186,14 +186,12 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            The ability to organically reason <strong>over</strong> and <strong>with</strong> both text and images is a pillar of human intelligence, yet the ability of Multimodal Large Language Models (MLLMs) to perform such multimodal reasoning remains under-explored.
+            The ability to organically reason over and with both text and images is a pillar of human intelligence, <b>yet the ability of Multimodal Large Language Models (MLLMs) to perform such multimodal reasoning remains under-explored.</b>
             Existing benchmarks often emphasize text-dominant reasoning or rely on shallow visual cues, failing to adequately assess integrated visual and textual reasoning.
           </p>
           <p>
             We introduce <img src="./static/images/emma.png" style="width:5.0em; margin-top: -0.4em; vertical-align: middle;" alt="Logo"/>, a benchmark targeting organic multimodal reasoning across mathematics, physics, chemistry, and coding. EMMA tasks demand advanced cross-modal reasoning that cannot be addressed by reasoning independently in each modality, offering an enhanced test suite for MLLMs' reasoning capabilities.
-          </p>
-          <p>
-            Our evaluation of state-of-the-art MLLMs on EMMA reveals significant limitations in handling complex multimodal and multi-step reasoning tasks, with even advanced techniques like Chain-of-Thought prompting and test-time compute scaling underperforming. These findings underscore the need for improved multimodal architectures and training paradigms to close the gap between human and model reasoning in multimodality.
+            Our evaluation of state-of-the-art MLLMs on EMMA reveals significant limitations in <b>handling complex multimodal and multi-step reasoning tasks</b>, with even advanced techniques like Chain-of-Thought prompting and test-time compute scaling underperforming. These findings underscore the need for improved multimodal architectures and training paradigms to close the gap between human and model reasoning in multimodality.
           </p>
         </div>
         <img src="./static/images/motivation.png" alt="Motivation" style="width: 100%; max-width: 1000px; margin-top: 20px;"/>
@@ -284,9 +282,9 @@
         <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
           <p>
-            EMMA is composed of 2,788 problems, of which 1,796 are newly constructed, across four domains: math, physics, chemistry, and coding. The key statistics of EMMA are summarized in Table~\ref{tab:keystats}, and its composition is presented in Figure~\ref{fig:composition}. 
+            EMMA is composed of 2,788 problems, of which 1,796 are newly constructed, across four domains: math, physics, chemistry, and coding.
             To provide fine-grained insights into how MLLMs might fail in multimodal reasoning, we assign labels to each problem in our benchmark. These labels are either created by domain experts or assigned by GPT-4o and subsequently verified by experts. 
-            As shown in Figure~\ref{fig:categories}, questions in EMMA assess a wide array of multimodal reasoning skills. For example, the pattern inference problem in math challenges models to identify and generalize visual patterns; the visual decomposition simulation problem in physics requires graphically decomposing forces to determine resultant effects; the reaction simulation problem in chemistry demands precise interpretation and simulation of electron movement; the 3D visualization problem in coding\footnote{Different from the other subjects in EMMA, coding questions can be assigned more than one category since our visualizations tend to employ multiple advanced techniques.} evaluates spatial imagination by requiring models to associate function calls with their corresponding 3D representations. 
+            As shown in Category Figure, questions in EMMA assess a wide array of multimodal reasoning skills. For example, the pattern inference problem in math challenges models to identify and generalize visual patterns; the visual decomposition simulation problem in physics requires graphically decomposing forces to determine resultant effects; the reaction simulation problem in chemistry demands precise interpretation and simulation of electron movement; the 3D visualization problem in coding. 
             <!-- a compilation of data 1) carefully examined and filtered from 28 existing VQA and MathQA datasets and 2) manually collected by us. In total, 6,141 examples were collected from 31 different datasets. -->
           </p>
 
@@ -308,11 +306,8 @@
 
 
           <p>
-            All the data examples were divided into two subsets: testmini and test. 
             <ul>
-              <li><b>testmini</b>: 1,000 examples used for model development, validation, or for those with limited computing resources.</li>
-              <li><b>test</b>: 5,141 examples for standard evaluation. Notably,
-                the answer labels for test will NOT be publicly released.</li>
+              <li><b>EMMA-mini</b>: To create a more balanced subset of EMMA, we randomly sample 400 questions (100 per subject) from the benchmark, hereafter referred to as EMMA-mini.</li>
             </ul>
           </p>
 
@@ -340,7 +335,7 @@
     <div class="columns is-multiline is-centered">
       <div class="column is-12">
         <h2 class="title is-3">Interactive Answers</h2>
-        <p>Click on the image to display the answer.</p>
+        <p>Click on the image to display the answer. Please check complete Coding questions <a href="https://colab.research.google.com/drive/1zyEUyM4Nx2NJiTtfMUu3uI3ccZR2lwjR?usp=sharing" target="_blank">here</a>.</p>
       </div>
       <!-- 第1个题目 -->
       <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
@@ -658,34 +653,31 @@
 </script>
 
 
-<div class="columns is-centered m-6">
+<!-- <div class="columns is-centered m-6">
   <div class="column is-full has-text-centered content">
     <h2 class="title is-3">Examples</h2>
-    <p>One example for each <b>mathematical reasoning</b> skill required in <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-      <span class="mathvista">MathVista</span></p>
-
     <div id="results-carousel" class="carousel results-carousel">
       <div class="box m-5">
         <div class="content has-text-centered">
-          <img src="static/images/examples/ari.png" alt="arithmetic reasoning" width="60%"/>
+          <img src="./static/images/math-case-1.png" alt="arithmetic reasoning" width="60%"/>
           <p>Arithmetic Reasoning</p>
         </div>
       </div>
       <div class="box m-5">
         <div class="content has-text-centered">
-          <img src="static/images/examples/alg.png" alt="algebraic reasoning" width="60%"/>
+          <img src="./static/images/physics-case-2.png" alt="algebraic reasoning" width="60%"/>
           <p>Algebraic Reasoning</p>
         </div>
       </div>
       <div class="box m-5">
         <div class="content has-text-centered">
-          <img src="static/images/examples/geo.png" alt="geometric reasoning" width="60%"/>
+          <img src="./static/images/physics-case-1.png" alt="geometric reasoning" width="60%"/>
           <p>Geometric Reasoning</p>
         </div>
       </div>
       <div class="box m-5">
         <div class="content has-text-centered">
-          <img src="static/images/examples/log.png" alt="logical reasoning" width="60%"/>
+          <img src="./static/images/chemistry-case-1.png" alt="logical reasoning" width="60%"/>
           <p>Logical Reasoning</p>
         </div>
       </div>
@@ -709,7 +701,7 @@
       </div> 
     </div> 
   </div>
-</div>
+</div> -->
 
 
 
@@ -754,6 +746,7 @@
               <p>Chemistry Case 1</p>
             </div>
           </div>
+          
         </div>
       </div>
     </div>
