@@ -342,24 +342,27 @@
           <div class="table-wrapper">
             <table id="emma-table">
               <thead>
+                <!-- 第一行表头：Reset、两大分区（EMMA, EMMA-Mini） -->
                 <tr>
                   <th colspan="3" class="reset-cell clickable" style="text-align: center;">Reset</th>
                   <th class="emma-details-cell clickable" colspan="1">EMMA</th>
                   <th class="emma-mini-details-cell clickable" colspan="1">EMMA-Mini</th>
                 </tr>
+                <!-- 第二行表头：Name, Size, CoT, 以及两大分区的详细列 -->
                 <tr>
                   <th class="sortable clickable" data-sort="string">Name</th>
                   <th class="clickable" data-sort="string">Size</th>
-                  <th class="sortable clickable" data-sort="date">Date</th>
+                  <!-- 新增：CoT 列，data-sort 用什么都行，可以用 "string" 或自定义 "cot" 等 -->
+                  <th class="sortable clickable" data-sort="string">CoT</th>
 
-
+                  <!-- EMMA 区域 -->
                   <th class="sortable clickable emma-overall" data-sort="number">Overall</th>
                   <th class="hidden emma-details sortable clickable" data-sort="number">Math</th>
                   <th class="hidden emma-details sortable clickable" data-sort="number">Physics</th>
                   <th class="hidden emma-details sortable clickable" data-sort="number">Chemistry</th>
                   <th class="hidden emma-details sortable clickable" data-sort="number">Coding</th>
 
-
+                  <!-- EMMA-Mini 区域 -->
                   <th class="sortable clickable emma-mini-overall" data-sort="number">Overall</th>
                   <th class="hidden emma-mini-details sortable clickable" data-sort="number">Math</th>
                   <th class="hidden emma-mini-details sortable clickable" data-sort="number">Physics</th>

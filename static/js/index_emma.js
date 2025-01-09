@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 function loadTableData() {
   console.log('Starting to load table data...');
-  fetch('./emma_data.json')
+  fetch('./emma_data.json') // <-- 这里改成你的 JSON 路径
     .then(response => {
       console.log('Response status:', response.status);
       if (!response.ok) {
@@ -41,13 +41,15 @@ function loadTableData() {
 
       data.leaderboardData.forEach((row, index) => {
         const tr = document.createElement('tr');
-        // 比如加上 row.info.type 当作一个标识，以后可用来改变背景色等
         tr.classList.add(row.info.type || 'unknown');
 
         // 如果有外部链接，则加上超链接
         const nameCell = (row.info.link && row.info.link.trim() !== '')
           ? `<a href="${row.info.link}" target="_blank"><b>${row.info.name}</b></a>`
           : `<b>${row.info.name}</b>`;
+
+        // 显示 CoT：当 row.info.CoT 为 true 时显示 ✓, false 时显示 ✗
+        const cotSymbol = row.info.CoT === true ? '✓' : '✗';
 
         // 安全获取对象中的属性
         const safeGet = (obj, path, defaultValue = '-') => {
@@ -56,8 +58,7 @@ function loadTableData() {
 
         // 格式化 Overall 的值，有些项目带星号
         const formatOverallValue = (value, source) => {
-          // 例如，如果 source 是 "author" 就可以加 *
-          // 这里的逻辑根据你的实际情况调整
+          // 如果 source 是 "author" 就加个星号, 具体逻辑可自定义
           return (source === 'author') ? `${value || '-'}*` : `${value || '-'}`;
         };
 
@@ -66,16 +67,19 @@ function loadTableData() {
           applyStyle(safeGet(row, 'emma.overall'), emmaScores.overall[index]),
           safeGet(row, 'emma.source')
         );
+
         // EMMA-Mini 的 Overall
         const emmaMiniOverall = formatOverallValue(
           applyStyle(safeGet(row, 'emma-mini.overall'), emmaMiniScores.overall[index]),
           safeGet(row, 'emma-mini.source')
         );
 
+        // 构建整行的 HTML
         tr.innerHTML = `
           <td>${nameCell}</td>
           <td>${row.info.size || '-'}</td>
-          <td>${row.info.date || '-'}</td>
+          <!-- 新增：CoT 列 -->
+          <td>${cotSymbol}</td>
 
           <!-- EMMA -->
           <td class="emma-overall">${emmaOverall}</td>
@@ -94,9 +98,8 @@ function loadTableData() {
         tbody.appendChild(tr);
       });
 
-      // 调整 Name 的列宽
       setTimeout(adjustNameColumnWidth, 0);
-      // 初始化排序（默认先按某个列排序，比如 EMMA-Mini Overall）
+      // 初始化排序（默认先按某列，比如 EMMA-Mini Overall）
       initializeSorting();
     })
     .catch(error => {
@@ -145,25 +148,19 @@ function setupEventListeners() {
  * 展开或折叠指定分区的详细列
  */
 function toggleDetails(section) {
-  // 只有两个分区
   const sections = ['emma', 'emma-mini'];
   sections.forEach(sec => {
     const detailCells = document.querySelectorAll('.' + sec + '-details');
     const overallCells = document.querySelectorAll('.' + sec + '-overall');
     const headerCell = document.querySelector('.' + sec + '-details-cell');
     if (sec === section) {
-      // 点击的分区执行 toggle
       detailCells.forEach(cell => cell.classList.toggle('hidden'));
-      // 根据是否展开，动态调整 colspan
       const currentColspan = headerCell.getAttribute('colspan');
-      // 如果之前是 1，则展开；如果之前是 4，则折叠(因为我们有4列 detail)
       headerCell.setAttribute('colspan', currentColspan === '1' ? '5' : '1');
     } else {
-      // 其他分区确保收起
       detailCells.forEach(cell => cell.classList.add('hidden'));
       overallCells.forEach(cell => cell.classList.remove('hidden'));
-      const otherHeaderCell = document.querySelector('.' + sec + '-details-cell');
-      otherHeaderCell.setAttribute('colspan', '1');
+      document.querySelector('.' + sec + '-details-cell').setAttribute('colspan', '1');
     }
   });
 
@@ -188,7 +185,7 @@ function resetTable() {
   document.querySelector('.emma-details-cell').setAttribute('colspan', '1');
   document.querySelector('.emma-mini-details-cell').setAttribute('colspan', '1');
 
-  // 默认按 EMMA-Mini Overall 倒序排（可根据需求改成 emma-overall）
+  // 默认按 EMMA-Mini Overall 排序（倒序）
   const emmaMiniOverallHeader = document.querySelector('#emma-table thead tr:last-child th.emma-mini-overall');
   sortTable(emmaMiniOverallHeader, true);
 
@@ -219,20 +216,17 @@ function sortTable(header, forceDescending = false, maintainOrder = false) {
       let aValue = getCellValue(a, columnIndex);
       let bValue = getCellValue(b, columnIndex);
 
-      // 处理空值的情况
+      // 处理空值
       if (aValue === '-' && bValue !== '-') return isDescending ? 1 : -1;
       if (bValue === '-' && aValue !== '-') return isDescending ? -1 : 1;
 
+      // 数值 / 日期 / 字符串
       if (sortType === 'number') {
         return isDescending
           ? parseFloat(bValue) - parseFloat(aValue)
           : parseFloat(aValue) - parseFloat(bValue);
-      } else if (sortType === 'date') {
-        return isDescending
-          ? new Date(bValue) - new Date(aValue)
-          : new Date(aValue) - new Date(bValue);
       } else {
-        // 字符串排序
+        // 其余(字符串等)
         return isDescending
           ? bValue.localeCompare(aValue)
           : aValue.localeCompare(bValue);
@@ -261,13 +255,11 @@ function getCellValue(row, index) {
   // 如果点击的是隐藏列，则找找同一区域里没隐藏的那个单元格
   if (cell && cell.classList.contains('hidden')) {
     if (cell.classList.contains('emma-details') || cell.classList.contains('emma-overall')) {
-      // 找到 emma-overall 或 emma-details 中未隐藏的
       cell = cells.find(c =>
         (c.classList.contains('emma-overall') || c.classList.contains('emma-details')) &&
         !c.classList.contains('hidden')
       );
     } else if (cell.classList.contains('emma-mini-details') || cell.classList.contains('emma-mini-overall')) {
-      // 找到 emma-mini-overall 或 emma-mini-details 中未隐藏的
       cell = cells.find(c =>
         (c.classList.contains('emma-mini-overall') || c.classList.contains('emma-mini-details')) &&
         !c.classList.contains('hidden')
@@ -278,10 +270,9 @@ function getCellValue(row, index) {
 }
 
 /**
- * 初始化时默认按某列排序
+ * 初始化时默认按 EMMA-Mini Overall 排序（倒序）
  */
 function initializeSorting() {
-  // 示例：默认用 EMMA-Mini Overall 排序（倒序）
   const emmaMiniOverallHeader = document.querySelector('#emma-table thead tr:last-child th.emma-mini-overall');
   sortTable(emmaMiniOverallHeader, true);
 }
