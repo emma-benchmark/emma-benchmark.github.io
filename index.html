@@ -34,11 +34,16 @@
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/vision.png">
 
+  <link rel="stylesheet" href="./static/css/index_mmmu.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <script src="./static/js/index_emma.js"></script>
+
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       bulmaCarousel.attach('#pdf-carousel', {
@@ -49,7 +54,7 @@
         autoplaySpeed: 5000 // 每 5 秒切换
       });
     });
-  </script>  
+  </script>
 </head>
 <body>
 
@@ -99,14 +104,14 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-  
+
           <!-- 新增图片 -->
           <img src="./static/images/emma.png" alt="EMMA Logo" style="max-width: 200px; margin-bottom: 1rem;">
           <!-- <h1 class="title is-1 publication-title">An Enhanced MultiModal ReAsoning Benchmark</h1>-->
           <!-- <h2 class="subtitle is-3 publication-subtitle">An Enhanced MultiModal ReAsoning Benchmark</h2> -->
           <!-- <h2 class="subtitle is-3 publication-subtitle">Can MLLMs Reason/Think in Multimodality?</h2> -->
           <h2 class="title is-3">An Enhanced MultiModal ReAsoning Benchmark</h2>
-          <h2 class="subtitle is-3 publication-subtitle">Can MLLMs Reason/Think in Multimodality?</h2>            
+          <h2 class="subtitle is-3 publication-subtitle">Can MLLMs Reason/Think in Multimodality?</h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="#">Yunzhuo Hao</a><sup>1</sup>*</span>,
@@ -123,7 +128,7 @@
             <span class="author-block">
               <a href="#">Yu Cheng</a><sup>5</sup></span>
           </div>
-          
+
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>University of Electronic Science and Technology of China,</span>
             <span class="author-block"><sup>2</sup>Sun Yat-sen University,</span>
@@ -131,11 +136,11 @@
             <span class="author-block"><sup>4</sup>Microsoft,</span>
             <span class="author-block"><sup>5</sup>The Chinese University of Hong Kong</span>
           </div>
-          
+
           <div class="is-size-6 has-text-centered">
             <p>*Equal contribution</p>
           </div>
-          
+
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
@@ -189,11 +194,11 @@
               </span>
             </div>
           </div>
-  
+
         </div>
       </div>
     </div>
-  </div>  
+  </div>
 </section>
 
 <section class="hero teaser">
@@ -210,7 +215,8 @@
 </section>
 
 
-<!-- 
+
+<!--
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
@@ -290,6 +296,7 @@
     </div>
   </div>
 </section>
+
 
 
 <section class="section" id="interactive-questions">
@@ -615,6 +622,73 @@
 </script>
 
 
+<section class="section">
+  <div class="container">
+    <!-- -------------------------------------------------------------------- RESULTS SECTION -------------------------------------------------------------------->
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3" id="leaderboard">Leaderboard</h2>
+        <div class="content has-text-centered">
+          <p> Accuracy scores on both EMMA and EMMA-mini.
+          </p>
+          <p> Click on EMMA or EMMA-mini to expand detailed results.
+          </p>
+        </div>
+        <br>
+        <div class="model-labels-container">
+          <span class="leaderboard-label human_expert">Human Expert</span>
+          <span class="leaderboard-label open_source">Open-Source</span>
+          <span class="leaderboard-label proprietary">Proprietary</span>
+        </div>
+        <br>
+
+        <div class="leaderboard-container">
+          <div class="table-wrapper">
+            <table id="emma-table">
+              <thead>
+                <!-- 第一行表头：Reset、两大分区（EMMA, EMMA-Mini） -->
+                <tr>
+                  <th colspan="3" class="reset-cell clickable" style="text-align: center;">Reset</th>
+                  <th class="emma-details-cell clickable" colspan="1">EMMA</th>
+                  <th class="emma-mini-details-cell clickable" colspan="1">EMMA-Mini</th>
+                </tr>
+                <!-- 第二行表头：Name, Size, CoT, 以及两大分区的详细列 -->
+                <tr>
+                  <th class="sortable clickable" data-sort="string">Name</th>
+                  <th class="clickable" data-sort="string">Size</th>
+                  <!-- 新增：CoT 列，data-sort 用什么都行，可以用 "string" 或自定义 "cot" 等 -->
+                  <th class="sortable clickable" data-sort="string">CoT</th>
+
+                  <!-- EMMA 区域 -->
+                  <th class="sortable clickable emma-overall" data-sort="number">Overall</th>
+                  <th class="hidden emma-details sortable clickable" data-sort="number">Math</th>
+                  <th class="hidden emma-details sortable clickable" data-sort="number">Physics</th>
+                  <th class="hidden emma-details sortable clickable" data-sort="number">Chemistry</th>
+                  <th class="hidden emma-details sortable clickable" data-sort="number">Coding</th>
+
+                  <!-- EMMA-Mini 区域 -->
+                  <th class="sortable clickable emma-mini-overall" data-sort="number">Overall</th>
+                  <th class="hidden emma-mini-details sortable clickable" data-sort="number">Math</th>
+                  <th class="hidden emma-mini-details sortable clickable" data-sort="number">Physics</th>
+                  <th class="hidden emma-mini-details sortable clickable" data-sort="number">Chemistry</th>
+                  <th class="hidden emma-mini-details sortable clickable" data-sort="number">Coding</th>
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+            </table>
+            <p class="test-desc">Overall results of different models on the EMMA leaderboard.
+              The best-performing model in each category is in-bold, and the second best is underlined.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
 
 <section class="section">
@@ -626,7 +700,7 @@
           <!-- 数学案例 -->
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="./static/images/math-case-1.png" alt="Math Case 1" 
+              <img src="./static/images/math-case-1.png" alt="Math Case 1"
                    style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/>
               <p>Math Case 1</p>
             </div>
@@ -635,7 +709,7 @@
           <!-- 物理案例 1 -->
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="./static/images/physics-case-1.png" alt="Physics Case 1" 
+              <img src="./static/images/physics-case-1.png" alt="Physics Case 1"
                    style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/>
               <p>Physics Case 1</p>
             </div>
@@ -644,7 +718,7 @@
           <!-- 物理案例 2 -->
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="./static/images/physics-case-2.png" alt="Physics Case 2" 
+              <img src="./static/images/physics-case-2.png" alt="Physics Case 2"
                    style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/>
               <p>Physics Case 2</p>
             </div>
@@ -653,7 +727,7 @@
           <!-- 化学案例 -->
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="./static/images/chemistry-case-1.png" alt="Chemistry Case 1" 
+              <img src="./static/images/chemistry-case-1.png" alt="Chemistry Case 1"
                    style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/>
               <p>Chemistry Case 1</p>
             </div>
@@ -670,104 +744,10 @@
 
     <div class="columns is-centered">
 
-      <!-- Visual Effects. -->
-      <!-- <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div> -->
-      <!--/ Visual Effects. -->
 
-      <!-- Matting. -->
-      <!-- <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div> -->
-    </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <!-- <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2> -->
-
-        <!-- Interpolating. -->
-        <!-- <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/> -->
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <!-- <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
 
       </div>
-    </div> 
+    </div>
     <!--/ Animation. -->
 
 

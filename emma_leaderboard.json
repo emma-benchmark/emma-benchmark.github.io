@@ -1,0 +1,417 @@
+{
+  "leaderboardData": [
+    {
+      "info": {
+        "name": "random choice",
+        "CoT": "-",
+        "type": "random_frequent",
+        "size": "-"
+      },
+      "emma": {
+        "overall": "18.08",
+        "math": "14.01",
+        "physics": "25.64",
+        "chemistry": "16.50",
+        "coding": "25.71"
+      },
+      "emma-mini": {
+        "overall": "22.75",
+        "math": "13.00",
+        "physics": "23.00",
+        "chemistry": "27.00",
+        "coding": "28.00"
+      }
+    },
+    {
+      "info": {
+        "name": "human expert",
+        "CoT": "-",
+        "type": "human_expert",
+        "size": "-",
+        "link": "https://emma-benchmark.github.io/"
+      },
+      "emma": {
+        "overall": "-",
+        "math": "-",
+        "physics": "-",
+        "chemistry": "-",
+        "coding": "-"
+      },
+      "emma-mini": {
+        "overall": "77.75",
+        "math": "75.00",
+        "physics": "64.50",
+        "chemistry": "86.00",
+        "coding": "85.50"
+      }
+    },
+    {
+      "info": {
+        "name": "claude 3.5 sonnet",
+        "CoT": "false",
+        "type": "proprietary",
+        "size": "-",
+        "link": "https://www.anthropic.com/"
+      },
+      "emma": {
+        "overall": "35.08",
+        "math": "25.34",
+        "physics": "33.97",
+        "chemistry": "40.90",
+        "coding": "38.65"
+      },
+      "emma-mini": {
+        "overall": "34.00",
+        "math": "23.00",
+        "physics": "34.00",
+        "chemistry": "44.00",
+        "coding": "35.00"
+      }
+    },
+    {
+      "info": {
+        "name": "gemini 2.0 flash",
+        "CoT": "false",
+        "type": "proprietary",
+        "size": "-",
+        "link": "https://ai.google.dev/"
+      },
+      "emma": {
+        "overall": "33.61",
+        "math": "23.88",
+        "physics": "38.46",
+        "chemistry": "36.31",
+        "coding": "42.02"
+      },
+      "emma-mini": {
+        "overall": "34.25",
+        "math": "20.00",
+        "physics": "40.00",
+        "chemistry": "36.00",
+        "coding": "41.00"
+      }
+    },
+    {
+      "info": {
+        "name": "gpt-4o",
+        "CoT": "false",
+        "type": "proprietary",
+        "size": "-",
+        "link": "https://platform.openai.com"
+      },
+      "emma": {
+        "overall": "32.42",
+        "math": "27.24",
+        "physics": "38.46",
+        "chemistry": "31.89",
+        "coding": "40.07"
+      },
+      "emma-mini": {
+        "overall": "35.25",
+        "math": "30.00",
+        "physics": "38.00",
+        "chemistry": "33.00",
+        "coding": "40.00"
+      }
+    },
+    {
+      "info": {
+        "name": "qwen2-vl-72b-instruct",
+        "CoT": "false",
+        "type": "open_source",
+        "size": "72B",
+        "link": "https://huggingface.co/Qwen/Qwen2-VL-72B-Instruct"
+      },
+      "emma": {
+        "overall": "33.46",
+        "math": "33.07",
+        "physics": "42.31",
+        "chemistry": "32.06",
+        "coding": "34.57"
+      },
+      "emma-mini": {
+        "overall": "37.25",
+        "math": "38.00",
+        "physics": "40.00",
+        "chemistry": "34.00",
+        "coding": "37.00"
+      }
+    },
+    {
+      "info": {
+        "name": "llava-onevision-72b",
+        "CoT": "false",
+        "type": "open_source",
+        "size": "72B",
+        "link": "https://huggingface.co/llava-hf/llava-onevision-qwen2-72b-ov-hf"
+      },
+      "emma": {
+        "overall": "27.33",
+        "math": "27.69",
+        "physics": "35.90",
+        "chemistry": "25.26",
+        "coding": "28.72"
+      },
+      "emma-mini": {
+        "overall": "27.25",
+        "math": "25.00",
+        "physics": "32.00",
+        "chemistry": "24.00",
+        "coding": "28.00"
+      }
+    },
+    {
+      "info": {
+        "name": "internvl2-llama3-76b",
+        "CoT": "false",
+        "type": "open_source",
+        "size": "76B",
+        "link": "https://huggingface.co/OpenGVLab/InternVL2-Llama3-76B"
+      },
+      "emma": {
+        "overall": "25.07",
+        "math": "25.11",
+        "physics": "22.44",
+        "chemistry": "24.06",
+        "coding": "27.84"
+      },
+      "emma-mini": {
+        "overall": "25.50",
+        "math": "31.00",
+        "physics": "22.00",
+        "chemistry": "21.00",
+        "coding": "28.00"
+      }
+    },
+    {
+      "info": {
+        "name": "internvl2.5-78b",
+        "CoT": "false",
+        "type": "open_source",
+        "size": "78B",
+        "link": "https://huggingface.co/OpenGVLab/InternVL2_5-78B"
+      },
+      "emma": {
+        "overall": "33.50",
+        "math": "31.39",
+        "physics": "38.46",
+        "chemistry": "35.20",
+        "coding": "31.91"
+      },
+      "emma-mini": {
+        "overall": "35.25",
+        "math": "30.00",
+        "physics": "40.00",
+        "chemistry": "38.00",
+        "coding": "33.00"
+      }
+    },
+    {
+      "info": {
+        "name": "claude 3.5 sonnet",
+        "CoT": "true",
+        "type": "proprietary",
+        "size": "-",
+        "link": "https://www.anthropic.com/"
+      },
+      "emma": {
+        "overall": "37.23",
+        "math": "29.37",
+        "physics": "41.03",
+        "chemistry": "41.07",
+        "coding": "40.60"
+      },
+      "emma-mini": {
+        "overall": "37.00",
+        "math": "30.00",
+        "physics": "38.00",
+        "chemistry": "41.00",
+        "coding": "39.00"
+      }
+    },
+    {
+      "info": {
+        "name": "gemini 2.0 flash",
+        "CoT": "true",
+        "type": "proprietary",
+        "size": "-",
+        "link": "https://ai.google.dev/"
+      },
+      "emma": {
+        "overall": "29.12",
+        "math": "25.90",
+        "physics": "38.46",
+        "chemistry": "24.66",
+        "coding": "40.96"
+      },
+      "emma-mini": {
+        "overall": "36.25",
+        "math": "24.00",
+        "physics": "41.00",
+        "chemistry": "36.00",
+        "coding": "44.00"
+      }
+    },
+    {
+      "info": {
+        "name": "gpt-4o",
+        "CoT": "true",
+        "type": "proprietary",
+        "size": "-",
+        "link": "https://platform.openai.com"
+      },
+      "emma": {
+        "overall": "32.71",
+        "math": "25.56",
+        "physics": "43.59",
+        "chemistry": "33.67",
+        "coding": "39.01"
+      },
+      "emma-mini": {
+        "overall": "36.00",
+        "math": "27.00",
+        "physics": "44.00",
+        "chemistry": "35.00",
+        "coding": "38.00"
+      }
+    },
+    {
+      "info": {
+        "name": "qwen2-vl-72b-instruct",
+        "CoT": "true",
+        "type": "open_source",
+        "size": "72B",
+        "link": "https://huggingface.co/Qwen/Qwen2-VL-72B-Instruct"
+      },
+      "emma": {
+        "overall": "27.12",
+        "math": "27.69",
+        "physics": "34.62",
+        "chemistry": "24.57",
+        "coding": "29.43"
+      },
+      "emma-mini": {
+        "overall": "31.00",
+        "math": "35.00",
+        "physics": "34.00",
+        "chemistry": "32.00",
+        "coding": "23.00"
+      }
+    },
+    {
+      "info": {
+        "name": "llava-onevision-72b",
+        "CoT": "true",
+        "type": "open_source",
+        "size": "72B",
+        "link": "https://huggingface.co/llava-hf/llava-onevision-qwen2-72b-ov-hf"
+      },
+      "emma": {
+        "overall": "23.82",
+        "math": "22.42",
+        "physics": "15.38",
+        "chemistry": "22.70",
+        "coding": "30.67"
+      },
+      "emma-mini": {
+        "overall": "25.25",
+        "math": "23.00",
+        "physics": "26.00",
+        "chemistry": "23.00",
+        "coding": "29.00"
+      }
+    },
+    {
+      "info": {
+        "name": "internvl2-llama3-76b",
+        "CoT": "true",
+        "type": "open_source",
+        "size": "76B",
+        "link": "https://huggingface.co/OpenGVLab/InternVL2-Llama3-76B"
+      },
+      "emma": {
+        "overall": "23.35",
+        "math": "22.20",
+        "physics": "32.05",
+        "chemistry": "19.73",
+        "coding": "30.32"
+      },
+      "emma-mini": {
+        "overall": "28.25",
+        "math": "27.00",
+        "physics": "33.00",
+        "chemistry": "21.00",
+        "coding": "32.00"
+      }
+    },
+    {
+      "info": {
+        "name": "internvl2.5-78b",
+        "CoT": "true",
+        "type": "open_source",
+        "size": "78B",
+        "link": "https://huggingface.co/OpenGVLab/InternVL2_5-78B"
+      },
+      "emma": {
+        "overall": "27.08",
+        "math": "25.56",
+        "physics": "39.74",
+        "chemistry": "27.47",
+        "coding": "25.18"
+      },
+      "emma-mini": {
+        "overall": "27.50",
+        "math": "31.00",
+        "physics": "36.00",
+        "chemistry": "24.00",
+        "coding": "19.00"
+      }
+    },
+    {
+      "info": {
+        "name": "gemini 2.0 flash thinking",
+        "CoT": "-",
+        "type": "proprietary",
+        "size": "-",
+        "link": "https://ai.google.dev/"
+      },
+      "emma": {
+        "overall": "38.06",
+        "math": "31.61",
+        "physics": "56.41",
+        "chemistry": "37.93",
+        "coding": "43.44"
+      },
+      "emma-mini": {
+        "overall": "43.50",
+        "math": "35.00",
+        "physics": "57.00",
+        "chemistry": "41.00",
+        "coding": "41.00"
+      }
+    },
+    {
+      "info": {
+        "name": "o1",
+        "CoT": "-",
+        "type": "proprietary",
+        "size": "-",
+        "link": "https://chatgpt.com/"
+      },
+      "emma": {
+        "overall": "-",
+        "math": "-",
+        "physics": "-",
+        "chemistry": "-",
+        "coding": "-"
+      },
+      "emma-mini": {
+        "overall": "45.75",
+        "math": "41.00",
+        "physics": "49.00",
+        "chemistry": "40.00",
+        "coding": "53.00"
+      }
+    }
+  ]
+}
