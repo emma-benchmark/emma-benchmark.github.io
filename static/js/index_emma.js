@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 function loadTableData() {
   console.log('Starting to load table data...');
-  fetch('./emma_data.json') // <-- 这里改成你的 JSON 路径
+  fetch('./emma_leaderboard.json') // <-- 这里改成你的 JSON 路径
     .then(response => {
       console.log('Response status:', response.status);
       if (!response.ok) {
@@ -48,8 +48,13 @@ function loadTableData() {
           ? `<a href="${row.info.link}" target="_blank"><b>${row.info.name}</b></a>`
           : `<b>${row.info.name}</b>`;
 
-        // 显示 CoT：当 row.info.CoT 为 true 时显示 ✓, false 时显示 ✗
-        const cotSymbol = row.info.CoT === true ? '✓' : '✗';
+        // 显示 CoT：当 row.info.CoT 为 true 时显示 ✓, false 时显示 ✗, '-' 时显示 '-'
+        let cotSymbol = '-';
+        if (row.info.CoT === "true") {
+          cotSymbol = '✓';
+        } else if (row.info.CoT === "false") {
+          cotSymbol = '✗';
+        }
 
         // 安全获取对象中的属性
         const safeGet = (obj, path, defaultValue = '-') => {
@@ -156,8 +161,10 @@ function toggleDetails(section) {
     if (sec === section) {
       detailCells.forEach(cell => cell.classList.toggle('hidden'));
       const currentColspan = headerCell.getAttribute('colspan');
+      // EMMA 和 EMMA-Mini 都有 4 个详细列
       headerCell.setAttribute('colspan', currentColspan === '1' ? '5' : '1');
     } else {
+      // 其他分区确保收起
       detailCells.forEach(cell => cell.classList.add('hidden'));
       overallCells.forEach(cell => cell.classList.remove('hidden'));
       document.querySelector('.' + sec + '-details-cell').setAttribute('colspan', '1');
@@ -216,6 +223,19 @@ function sortTable(header, forceDescending = false, maintainOrder = false) {
       let aValue = getCellValue(a, columnIndex);
       let bValue = getCellValue(b, columnIndex);
 
+      // 如果是 CoT 列（data-sort="cot"），我们可以让 true 排前面 / false 排后面
+      if (sortType === 'cot') {
+        // 将 "✓" 当作 true, "✗" 当作 false, "-" 视为最低
+        const cotMapping = {
+          '✓': 2,
+          '✗': 1,
+          '-': 0
+        };
+        aValue = cotMapping[aValue] !== undefined ? cotMapping[aValue] : 0;
+        bValue = cotMapping[bValue] !== undefined ? cotMapping[bValue] : 0;
+        return isDescending ? (bValue - aValue) : (aValue - bValue);
+      }
+
       // 处理空值
       if (aValue === '-' && bValue !== '-') return isDescending ? 1 : -1;
       if (bValue === '-' && aValue !== '-') return isDescending ? -1 : 1;
@@ -225,8 +245,12 @@ function sortTable(header, forceDescending = false, maintainOrder = false) {
         return isDescending
           ? parseFloat(bValue) - parseFloat(aValue)
           : parseFloat(aValue) - parseFloat(bValue);
+      } else if (sortType === 'date') {
+        return isDescending
+          ? new Date(bValue) - new Date(aValue)
+          : new Date(aValue) - new Date(bValue);
       } else {
-        // 其余(字符串等)
+        // 字符串排序
         return isDescending
           ? bValue.localeCompare(aValue)
           : aValue.localeCompare(bValue);
@@ -252,7 +276,7 @@ function getCellValue(row, index) {
   const cells = Array.from(row.children);
   let cell = cells[index];
 
-  // 如果点击的是隐藏列，则找找同一区域里没隐藏的那个单元格
+  // 如果点击的是隐藏列，则找同一区域里未隐藏的单元格
   if (cell && cell.classList.contains('hidden')) {
     if (cell.classList.contains('emma-details') || cell.classList.contains('emma-overall')) {
       cell = cells.find(c =>
