@@ -1,0 +1,75 @@
+{
+  "leaderboardData": [
+    {
+      "info": {
+        "type": "human_expert",
+        "link": "https://example.com",
+        "name": "Expert #1",
+        "size": "N/A",
+        "date": "2024-05-01"
+      },
+      "emma": {
+        "overall": "95.5",
+        "math": "98",
+        "physics": "92",
+        "chemistry": "94",
+        "coding": "95"
+      },
+      "emma-mini": {
+        "overall": "90",
+        "math": "92",
+        "physics": "89",
+        "chemistry": "91",
+        "coding": "88"
+      }
+    },
+    {
+      "info": {
+        "type": "open_source",
+        "link": "",
+        "name": "OpenModel A",
+        "size": "7B",
+        "date": "2024-04-15"
+      },
+      "emma": {
+        "source": "",
+        "overall": "80",
+        "math": "82",
+        "physics": "85",
+        "chemistry": "79",
+        "coding": "70"
+      },
+      "emma-mini": {
+        "overall": "78",
+        "math": "81",
+        "physics": "75",
+        "chemistry": "80",
+        "coding": "69"
+      }
+    },
+    {
+      "info": {
+        "type": "proprietary",
+        "link": "https://anotherexample.com",
+        "name": "ProModel X",
+        "size": "13B",
+        "date": "2025-01-01"
+      },
+      "emma": {
+        "source": "",
+        "overall": "87",
+        "math": "85",
+        "physics": "88",
+        "chemistry": "84",
+        "coding": "90"
+      },
+      "emma-mini": {
+        "overall": "83",
+        "math": "80",
+        "physics": "82",
+        "chemistry": "81",
+        "coding": "85"
+      }
+    }
+  ]
+}

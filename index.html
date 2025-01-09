@@ -34,11 +34,16 @@
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/vision.png">
 
+  <link rel="stylesheet" href="./static/css/index_mmmu.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <script src="./static/js/index_emma.js"></script>
+
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       bulmaCarousel.attach('#pdf-carousel', {
@@ -49,7 +54,7 @@
         autoplaySpeed: 5000 // 每 5 秒切换
       });
     });
-  </script>  
+  </script>
 </head>
 <body>
 
@@ -99,14 +104,14 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-  
+
           <!-- 新增图片 -->
           <img src="./static/images/emma.png" alt="EMMA Logo" style="max-width: 200px; margin-bottom: 1rem;">
           <!-- <h1 class="title is-1 publication-title">An Enhanced MultiModal ReAsoning Benchmark</h1>-->
           <!-- <h2 class="subtitle is-3 publication-subtitle">An Enhanced MultiModal ReAsoning Benchmark</h2> -->
           <!-- <h2 class="subtitle is-3 publication-subtitle">Can MLLMs Reason/Think in Multimodality?</h2> -->
           <h2 class="title is-3">An Enhanced MultiModal ReAsoning Benchmark</h2>
-          <h2 class="subtitle is-3 publication-subtitle">Can MLLMs Reason/Think in Multimodality?</h2>            
+          <h2 class="subtitle is-3 publication-subtitle">Can MLLMs Reason/Think in Multimodality?</h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="#">Yunzhuo Hao</a><sup>1</sup>*</span>,
@@ -123,7 +128,7 @@
             <span class="author-block">
               <a href="#">Yu Cheng</a><sup>5</sup></span>
           </div>
-          
+
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>University of Electronic Science and Technology of China,</span>
             <span class="author-block"><sup>2</sup>Sun Yat-sen University,</span>
@@ -131,11 +136,11 @@
             <span class="author-block"><sup>4</sup>Microsoft,</span>
             <span class="author-block"><sup>5</sup>The Chinese University of Hong Kong</span>
           </div>
-          
+
           <div class="is-size-6 has-text-centered">
             <p>*Equal contribution</p>
           </div>
-          
+
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
@@ -189,11 +194,11 @@
               </span>
             </div>
           </div>
-  
+
         </div>
       </div>
     </div>
-  </div>  
+  </div>
 </section>
 
 <section class="hero teaser">
@@ -210,7 +215,8 @@
 </section>
 
 
-<!-- 
+
+<!--
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
@@ -277,7 +283,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Visual reasoning is fundamental to human intelligence, yet the ability of Multimodal Large Language Models (MLLMs) to perform true multimodal reasoning remains underexplored. 
+            Visual reasoning is fundamental to human intelligence, yet the ability of Multimodal Large Language Models (MLLMs) to perform true multimodal reasoning remains underexplored.
           </p>
           <p>
             Existing benchmarks often emphasize shallow perceptual cues or text-dominant reasoning, leaving a gap in evaluating tasks that require integrated visual and textual reasoning.
@@ -309,6 +315,75 @@
     <!--/ Paper video. -->
   </div>
 </section>
+
+
+
+<section class="section">
+  <div class="container">
+    <!-- -------------------------------------------------------------------- RESULTS SECTION -------------------------------------------------------------------->
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3" id="leaderboard">Leaderboard</h2>
+        <div class="content has-text-centered">
+          <p> Accuracy scores on both EMMA and EMMA-mini.
+          </p>
+          <p> Click on EMMA or EMMA-mini to expand detailed results.
+          </p>
+        </div>
+        <br>
+        <div class="model-labels-container">
+          <span class="leaderboard-label human_expert">Human Expert</span>
+          <span class="leaderboard-label open_source">Open-Source</span>
+          <span class="leaderboard-label proprietary">Proprietary</span>
+        </div>
+        <br>
+
+        <div class="leaderboard-container">
+          <div class="table-wrapper">
+            <table id="emma-table">
+              <thead>
+                <tr>
+                  <th colspan="3" class="reset-cell clickable" style="text-align: center;">Reset</th>
+                  <th class="emma-details-cell clickable" colspan="1">EMMA</th>
+                  <th class="emma-mini-details-cell clickable" colspan="1">EMMA-Mini</th>
+                </tr>
+                <tr>
+                  <th class="sortable clickable" data-sort="string">Name</th>
+                  <th class="clickable" data-sort="string">Size</th>
+                  <th class="sortable clickable" data-sort="date">Date</th>
+
+
+                  <th class="sortable clickable emma-overall" data-sort="number">Overall</th>
+                  <th class="hidden emma-details sortable clickable" data-sort="number">Math</th>
+                  <th class="hidden emma-details sortable clickable" data-sort="number">Physics</th>
+                  <th class="hidden emma-details sortable clickable" data-sort="number">Chemistry</th>
+                  <th class="hidden emma-details sortable clickable" data-sort="number">Coding</th>
+
+
+                  <th class="sortable clickable emma-mini-overall" data-sort="number">Overall</th>
+                  <th class="hidden emma-mini-details sortable clickable" data-sort="number">Math</th>
+                  <th class="hidden emma-mini-details sortable clickable" data-sort="number">Physics</th>
+                  <th class="hidden emma-mini-details sortable clickable" data-sort="number">Chemistry</th>
+                  <th class="hidden emma-mini-details sortable clickable" data-sort="number">Coding</th>
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+            </table>
+            <p class="test-desc">Overall results of different models on the EMMA leaderboard.
+              The best-performing model in each category is in-bold, and the second best is underlined.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
@@ -318,7 +393,7 @@
           <!-- 数学案例 -->
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="./static/images/math-case-1.png" alt="Math Case 1" 
+              <img src="./static/images/math-case-1.png" alt="Math Case 1"
                    style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/>
               <p>Math Case 1</p>
             </div>
@@ -327,7 +402,7 @@
           <!-- 物理案例 1 -->
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="./static/images/physics-case-1.png" alt="Physics Case 1" 
+              <img src="./static/images/physics-case-1.png" alt="Physics Case 1"
                    style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/>
               <p>Physics Case 1</p>
             </div>
@@ -336,7 +411,7 @@
           <!-- 物理案例 2 -->
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="./static/images/physics-case-2.png" alt="Physics Case 2" 
+              <img src="./static/images/physics-case-2.png" alt="Physics Case 2"
                    style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/>
               <p>Physics Case 2</p>
             </div>
@@ -345,7 +420,7 @@
           <!-- 化学案例 -->
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="./static/images/chemistry-case-1.png" alt="Chemistry Case 1" 
+              <img src="./static/images/chemistry-case-1.png" alt="Chemistry Case 1"
                    style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/>
               <p>Chemistry Case 1</p>
             </div>
@@ -459,7 +534,7 @@
         <!--/ Re-rendering. -->
 
       </div>
-    </div> 
+    </div>
     <!--/ Animation. -->
 
 
