@@ -177,3 +177,98 @@ body {
   height: 100%; /* 保证图片高度占满容器 */
 }
 
+.container {
+  max-width: 1200px; /* 调整宽度，可以根据实际需要来修改 */
+  width: 100%;       /* 设置容器的宽度为100% */
+  margin: 0 auto;    /* 居中对齐 */
+  padding: 20px;     /* 给容器添加一些内边距 */
+}
+
+
+body {
+  font-size: 18px;
+  line-height: 1.8;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section-divider {
+  border-top: 2px solid #ccc;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.section-gradient {
+  background: linear-gradient(to right, #f0f0f0, #e0e0e0);
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.section-custom-divider {
+  position: relative;
+  padding: 20px 0;
+}
+
+.section-custom-divider::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #333;
+}
+
+
+/* 样式表 (style.css) */
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;  /* 控制页面最大宽度 */
+  margin: 0 auto;     /* 居中显示 */
+  padding: 20px;      /* 给容器一些内边距 */
+}
+
+
+
+/* 设置段落、标题等文本的对齐方式 */
+.content p {
+  margin: 0 ;
+  padding: 0;
+  text-align: justify; /* 或者根据需求使用 left、center */
+}
+
+/* 内容样式 */
+.content {
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  padding-top: 0; /* 去除section顶部的默认内边距 */
+  margin-top: 0;  /* 去除section顶部的默认外边距 */
+}
+
+.container {
+  padding-top: 10px; /* 调整container顶部的内边距 */
+  margin-top: 0;     /* 去除container顶部的外边距 */
+}
+
+/* 仅针对类为 .centered-text 的 p 标签应用居中样式 */
+.centered-text {
+  text-align: center;  /* 确保此段文本水平居中 */
+  margin: 0 auto;      /* 可选：删除段落的外边距，确保其居中 */
+}
