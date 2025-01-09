@@ -164,3 +164,16 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+
+
+.answer {
+  display: none; /* 默认隐藏答案 */
+}
+
+.question-image {
+  object-fit: contain;  /* 或者使用 'cover'，根据需求选择 */
+  width: 100%; /* 保证图片宽度占满容器 */
+  height: 100%; /* 保证图片高度占满容器 */
+}
+
