@@ -412,6 +412,29 @@
         "chemistry": "40.00",
         "coding": "53.00"
       }
+    },
+    {
+      "info": {
+        "name": "QVQ-72B-Preview",
+        "CoT": "-",
+        "type": "open_source",
+        "size": "72B",
+        "link": "https://huggingface.co/Qwen/QVQ-72B-Preview"
+      },
+      "emma": {
+        "overall": "-",
+        "math": "-",
+        "physics": "-",
+        "chemistry": "-",
+        "coding": "-"
+      },
+      "emma-mini": {
+        "overall": "32.00",
+        "math": "34.00",
+        "physics": "39.00",
+        "chemistry": "24.00",
+        "coding": "31.00"
+      }
     }
   ]
 }
