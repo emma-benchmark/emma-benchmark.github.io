@@ -369,7 +369,7 @@
     },
     {
       "info": {
-        "name": "gemini 2.0 flash thinking",
+        "name": "gemini-2.0-flash-thinking-exp-1219",
         "CoT": "-",
         "type": "proprietary",
         "size": "-",
@@ -388,6 +388,29 @@
         "physics": "57.00",
         "chemistry": "41.00",
         "coding": "41.00"
+      }
+    },
+    {
+      "info": {
+        "name": "gemini-2.0-flash-thinking-exp-01-21",
+        "CoT": "-",
+        "type": "proprietary",
+        "size": "-",
+        "link": "https://ai.google.dev/"
+      },
+      "emma": {
+        "overall": "42.50",
+        "math": "37.11",
+        "physics": "60.26",
+        "chemistry": "41.58",
+        "coding": "48.05"
+      },
+      "emma-mini": {
+        "overall": "48.00",
+        "math": "34.00",
+        "physics": "63.00",
+        "chemistry": "47.00",
+        "coding": "48.00"
       }
     },
     {
