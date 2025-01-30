@@ -272,3 +272,46 @@ body {
   font-size: 16px;       /* 设置字体大小 */
   margin-top: 10px;      /* 上边距 */
 }
+
+/* 确保图片完整显示 */
+.case-image {
+  width: 100%;  /* 宽度自适应 */
+  max-height: 500px; /* 限制最大高度，防止过高 */
+  object-fit: contain; /* 让整个图片都显示，不裁剪 */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 鼠标悬停放大 */
+.case-image:hover {
+  transform: scale(1.05);
+}
+
+/* 让 carousel 盒子有更大高度 */
+.results-carousel .box {
+    height: auto; /* 让内容自然撑开 */
+    min-height: 450px; /* 限制最小高度，避免太矮 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* 让图片高度更大，但不裁剪 */
+.case-image {
+    width: 100%;
+    max-height: 500px; /* 适配高度 */
+    object-fit: contain; /* 确保完整显示 */
+    border-radius: 10px;
+}
+
+/* 轮播样式优化 */
+.results-carousel {
+    display: flex;
+    gap: 120px; /* 增加间距，使排版更舒展 */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
