@@ -47,11 +47,11 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       bulmaCarousel.attach('#pdf-carousel', {
-        slidesToScroll: 1,  // 每次滚动一个
-        slidesToShow: 1,    // 每次展示一个
-        loop: true,         // 启用循环滚动
-        autoplay: true,     // 自动滚动
-        autoplaySpeed: 5000 // 每 5 秒切换
+        slidesToScroll: 1,  
+        slidesToShow: 1,    
+        loop: true,         
+        autoplay: true,     
+        autoplaySpeed: 5000 
       });
     });
   </script>
@@ -66,8 +66,6 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-
-          <!-- 新增图片 -->
           <img src="./static/images/emma.png" alt="EMMA Logo" style="max-width: 200px; margin-bottom: 1rem;">
           <!-- <h1 class="title is-1 publication-title">An Enhanced MultiModal ReAsoning Benchmark</h1>-->
           <!-- <h2 class="subtitle is-3 publication-subtitle">An Enhanced MultiModal ReAsoning Benchmark</h2> -->
@@ -76,96 +74,22 @@
           <h2 class="subtitle is-3 publication-subtitle">Can MLLMs Reason in Multimodality?</h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=0SPl0hcAAAAJ&hl=zh-CN">Yunzhuo Hao</a><sup>1</sup>*</span>,
-            <span class="author-block">
-              <a href="#">Jiawei Gu</a><sup>2</sup>*</span>,
-            <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=P8MF9AQAAAAJ&hl=en">Huichen Will Wang</a><sup>3</sup>*</span>,
-            <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=WR875gYAAAAJ&hl=en">Linjie Li</a><sup>4</sup>*</span>,
-            <span class="author-block">
-              <a href="https://zyang-ur.github.io/">Zhengyuan Yang</a><sup>4</sup>,</span>
-            <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=cDcWXuIAAAAJ&hl=zh-CN">Lijuan Wang</a><sup>4</sup>,</span>
-            <span class="author-block">
-              <a href="https://ych133.github.io/">Yu Cheng</a><sup>5</sup></span>
+              <p>Anonymous Authors<sup>1</sup></p></span>
           </div>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Electronic Science and Technology of China,</span>
-            <span class="author-block"><sup>2</sup>Sun Yat-sen University,</span>
-            <span class="author-block"><sup>3</sup>University of Washington,</span>
-            <span class="author-block"><sup>4</sup>Microsoft,</span>
-            <span class="author-block"><sup>5</sup>The Chinese University of Hong Kong</span>
-          </div>
-
-          <div class="is-size-6 has-text-centered">
-            <p>*Equal contribution</p>
-          </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://www.arxiv.org/pdf/2501.05444"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://www.arxiv.org/abs/2501.05444"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://huggingface.co/datasets/luckychao/EMMA" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon" style="font-size:18px">🤗</span>
-                  <span>EMMA</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://huggingface.co/datasets/luckychao/EMMA-mini" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon" style="font-size:18px">🤗</span>
-                  <span>EMMA-mini</span>
-                </a>
-              </span>
-<!--              &lt;!&ndash; Video Link. &ndash;&gt;-->
-<!--              <span class="link-block">-->
-<!--                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"-->
-<!--                   class="external-link button is-normal is-rounded is-dark">-->
-<!--                  <span class="icon">-->
-<!--                      <i class="fab fa-youtube"></i>-->
-<!--                  </span>-->
-<!--                  <span>Video</span>-->
-<!--                </a>-->
-<!--              </span>-->
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/hychaochao/EMMA"
+                <a href="https://anonymous.4open.science/r/emma-dataset-2325"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Anonymous Github</span>
                   </a>
               </span>
-<!--              &lt;!&ndash; Dataset Link. &ndash;&gt;-->
-<!--              <span class="link-block">-->
-<!--                <a href="https://github.com/google/nerfies/releases/tag/0.1"-->
-<!--                   class="external-link button is-normal is-rounded is-dark">-->
-<!--                  <span class="icon">-->
-<!--                      <i class="far fa-images"></i>-->
-<!--                  </span>-->
-<!--                  <span>Data</span>-->
-<!--                  </a>-->
-<!--              </span>-->
               <span class="link-block">
                 <a href="#leaderboard" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon has-text-white">🏆</span>
@@ -173,21 +97,19 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://x.com/will_wang_whc/status/1877550459290071318" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon has-text-white">🌐</span>
-                  <span>Twitter</span>
+                <a href="#analysis" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon has-text-white">📊</span>
+                  <span>Analysis</span>
                 </a>
-              <!-- </span>
+              </span>
               <span class="link-block">
                 <a href="#interactive-questions" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon has-text-white">
-                    <span class="icon has-text-white">🧩</span>
-                    <span>Examples</span>
+                  <span class="icon has-text-white">🧩</span>
+                  <span>Examples</span>
                 </a>
-              </span> -->
+              </span>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -207,40 +129,6 @@
   </div>
 </section>
 
-
-
-
-
-<section class="section">
-  <div class="container" style="margin-bottom: 2vh;">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">🔔News</h2>
-        <div class="content has-text-justified">
-          <p>  
-            <b>🔥 [2025-01-28]</b>: Exciting updates on the <b><a href="#leaderboard">Leaderboard</a></b>!  We've added <i>Gemini-2.0-Flash-Thinking-0121</i> and <i>QVQ-72B-Preview</i> performances. Currently, <b>Gemini-2.0-Flash-Thinking-exp-0121🥇</b>, <b>o1🥈</b>, and <b>Gemini-2.0-Flash-Thinking-exp-1219🥉</b> on EMMA-Mini.  
-          </p>
-                
-            <b>🚀 [2025-01-09]</b>: We released <b><a href="https://www.arxiv.org/abs/2501.05444">EMMA</a></b>, a benchmark for advanced multimodal reasoning. 🥳
-          </p>
-      </div>
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            The ability to organically reason over and with both text and images is a pillar of human intelligence, <b>yet the ability of Multimodal Large Language Models (MLLMs) to perform such multimodal reasoning remains under-explored.</b>
-            Existing benchmarks often emphasize text-dominant reasoning or rely on shallow visual cues, failing to adequately assess integrated visual and textual reasoning.
-          </p>
-          <p>
-            We introduce <img src="./static/images/emma.png" style="width:5.0em; margin-top: -0.4em; vertical-align: middle;" alt="Logo"/>, a benchmark targeting organic multimodal reasoning across mathematics, physics, chemistry, and coding. EMMA tasks demand advanced cross-modal reasoning that cannot be addressed by reasoning independently in each modality, offering an enhanced test suite for MLLMs' reasoning capabilities.
-            Our evaluation of state-of-the-art MLLMs on EMMA reveals significant limitations in <b>handling complex multimodal and multi-step reasoning tasks</b>, with even advanced techniques like Chain-of-Thought prompting and test-time compute scaling underperforming. These findings underscore the need for improved multimodal architectures and training paradigms to close the gap between human and model reasoning in multimodality.
-          </p>
-        </div>
-        <img src="./static/images/motivation.png" alt="Motivation" style="width: 100%; max-width: 1000px; margin-top: 20px;"/>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 
@@ -386,7 +274,7 @@
   </div>
     
 
-<section class="section">
+<section class="section" id="analysis">
   <div class="container">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
@@ -744,57 +632,6 @@
 </script>
 
 
-<!-- <div class="columns is-centered m-6">
-  <div class="column is-full has-text-centered content">
-    <h2 class="title is-3">Examples</h2>
-    <div id="results-carousel" class="carousel results-carousel">
-      <div class="box m-5">
-        <div class="content has-text-centered">
-          <img src="./static/images/math-case-1.png" alt="arithmetic reasoning" width="60%"/>
-          <p>Arithmetic Reasoning</p>
-        </div>
-      </div>
-      <div class="box m-5">
-        <div class="content has-text-centered">
-          <img src="./static/images/physics-case-2.png" alt="algebraic reasoning" width="60%"/>
-          <p>Algebraic Reasoning</p>
-        </div>
-      </div>
-      <div class="box m-5">
-        <div class="content has-text-centered">
-          <img src="./static/images/physics-case-1.png" alt="geometric reasoning" width="60%"/>
-          <p>Geometric Reasoning</p>
-        </div>
-      </div>
-      <div class="box m-5">
-        <div class="content has-text-centered">
-          <img src="./static/images/chemistry-case-1.png" alt="logical reasoning" width="60%"/>
-          <p>Logical Reasoning</p>
-        </div>
-      </div>
-      <div class="box m-5">
-        <div class="content has-text-centered">
-          <img src="static/images/examples/num.png" alt="numeric reasoning" width="60%"/>
-          <p>Numeric Reasoning</p>
-        </div>
-      </div>
-      <div class="box m-5">
-        <div class="content has-text-centered">
-          <img src="static/images/examples/sta.png" alt="statistical reasoning" width="60%"/>
-          <p>Statistical Reasoning</p>
-        </div>
-      </div>
-      <div class="box m-5">
-        <div class="content has-text-centered">
-          <img src="static/images/examples/sci.png" alt="scientific reasoning" width="60%"/>
-          <p>Scientific Reasoning</p>
-        </div>
-      </div> 
-    </div> 
-  </div>
-</div> -->
-
-
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -850,96 +687,7 @@
 </section>
 
 
-<section class="section">
-  <div class="container is-max-desktop">
 
-    <div class="columns is-centered">
-
-
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <!-- <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Concurrent Work. -->
-
-  </div>
-</section>
-
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{hao2025can,
-      title={Can MLLMs Reason in Multimodality? EMMA: An Enhanced MultiModal ReAsoning Benchmark},
-      author={Hao, Yunzhuo and Gu, Jiawei and Wang, Huichen Will and Li, Linjie and Yang, Zhengyuan and Wang, Lijuan and Cheng, Yu},
-      journal={arXiv preprint arXiv:2501.05444},
-      year={2025}
-    }
-</code></pre>
-  </div>
-</section>
-<div id="visitor-map" style="width: 300px; height: 300px; overflow: hidden; margin: 0 auto;">
-  <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=a1QOM1qrYlJkVcSpw9uGto-GDGARlIwpS5LWLZjHCE8&cl=ffffff&w=a"></script>
-</div>
-
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="https://www.arxiv.org/pdf/2501.05444">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/hychaochao/EMMA" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <!-- <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
-          </p> -->
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
 
 </body>
 </html>
