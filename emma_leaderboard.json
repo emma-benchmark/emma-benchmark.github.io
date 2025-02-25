@@ -277,6 +277,29 @@
     },
     {
       "info": {
+        "name": "kimi-k1.5-preview",
+        "CoT": "-",
+        "type": "proprietary",
+        "size": "-",
+        "link": "https://kimi.ai/" 
+      },
+      "emma": {
+        "overall": "-",
+        "math": "-",
+        "physics": "-",
+        "chemistry": "-",
+        "coding": "-"
+      },
+      "emma-mini": {
+        "overall": "33.75",
+        "math": "31.00",
+        "physics": "47.00",
+        "chemistry": "26.00",
+        "coding": "31.00"
+      }
+    },
+    {
+      "info": {
         "name": "qwen2-vl-72b-instruct",
         "CoT": "true",
         "type": "open_source",

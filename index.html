@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/vision.png">
 
-  <link rel="stylesheet" href="./static/css/index_mmmu.css">
+  <link rel="stylesheet" href="./static/css/index_emma.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -47,11 +47,11 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       bulmaCarousel.attach('#pdf-carousel', {
-        slidesToScroll: 1,  // 每次滚动一个
-        slidesToShow: 1,    // 每次展示一个
-        loop: true,         // 启用循环滚动
-        autoplay: true,     // 自动滚动
-        autoplaySpeed: 5000 // 每 5 秒切换
+        slidesToScroll: 1,  //
+        slidesToShow: 1,    // 
+        loop: true,         // 
+        autoplay: true,     // 
+        autoplaySpeed: 5000 // 
       });
     });
   </script>
@@ -255,27 +255,21 @@
           <div class="table-wrapper">
             <table id="emma-table">
               <thead>
-                <!-- 第一行表头：Reset、两大分区（EMMA, EMMA-Mini） -->
                 <tr>
                   <th colspan="3" class="reset-cell clickable" style="text-align: center;">Reset</th>
                   <th class="emma-details-cell clickable" colspan="1">EMMA</th>
                   <th class="emma-mini-details-cell clickable" colspan="1">EMMA-Mini</th>
                 </tr>
-                <!-- 第二行表头：Name, Size, CoT, 以及两大分区的详细列 -->
                 <tr>
                   <th class="sortable clickable" data-sort="string">Name</th>
                   <th class="clickable" data-sort="string">Size</th>
-                  <!-- 新增：CoT 列，data-sort 用什么都行，可以用 "string" 或自定义 "cot" 等 -->
                   <th class="sortable clickable" data-sort="string">CoT prompting</th>
-
-                  <!-- EMMA 区域 -->
                   <th class="sortable clickable emma-overall" data-sort="number">Overall</th>
                   <th class="hidden emma-details sortable clickable" data-sort="number">Math</th>
                   <th class="hidden emma-details sortable clickable" data-sort="number">Physics</th>
                   <th class="hidden emma-details sortable clickable" data-sort="number">Chemistry</th>
                   <th class="hidden emma-details sortable clickable" data-sort="number">Coding</th>
 
-                  <!-- EMMA-Mini 区域 -->
                   <th class="sortable clickable emma-mini-overall" data-sort="number">Overall</th>
                   <th class="hidden emma-mini-details sortable clickable" data-sort="number">Math</th>
                   <th class="hidden emma-mini-details sortable clickable" data-sort="number">Physics</th>
@@ -320,24 +314,6 @@
             As shown in  <a href="#EMMA_figure" style="text-decoration: underline; color: inherit;">Category Figure</a>, questions in EMMA <b>assess a wide array of multimodal reasoning skills</b>. For example, the pattern inference problem in math challenges models to identify and generalize visual patterns; the visual decomposition simulation problem in physics requires graphically decomposing forces to determine resultant effects; the reaction simulation problem in chemistry demands precise interpretation and simulation of electron movement; the 3D visualization problem in coding. 
             <!-- a compilation of data 1) carefully examined and filtered from 28 existing VQA and MathQA datasets and 2) manually collected by us. In total, 6,141 examples were collected from 31 different datasets. -->
           </p>
-
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/our_new_3_datasets.png" alt="algebraic reasoning" width="80%"/>
-                <p> Examples of our newly annotated datasets: IQTest, FunctionQA, and PaperQA.</p>
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/source_dataset.png" alt="arithmetic reasoning" width="50%"/>
-                <p> Summary of the 31 different source datasets in <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-                  <span class="mathvista">MathVista</span>.
-              </div>
-            </div>
-          </div>
-
-
           <p>
             <ul>
               <li><b>EMMA-mini</b>: To create a more balanced subset of EMMA, we randomly sample <b>400 questions</b> (100 per subject) from the benchmark, hereafter referred to as EMMA-mini.</li>
@@ -361,7 +337,6 @@
     </div>
 
 <div class="container" style="margin-bottom: 2vh;">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Test-time Compute Scaling</h2>
@@ -383,7 +358,6 @@
         <h2 class="title is-3">Error Analysis</h2>
         <div class="content has-text-justified">
 
-          <!-- 第一张图与分析段落 -->
           <div class="columns is-centered">
             <div class="column is-half">
               <div class="box m-5">
@@ -394,7 +368,6 @@
               </div>
             </div>
 
-            <!-- 第二张图与分析段落 -->
             <div class="column is-half">
               <div class="box m-5">
                 <div class="content has-text-centered">
@@ -410,328 +383,6 @@
   </div>
 </section>
 
-
-<section class="section" id="interactive-questions">
-  <div class="container is-max-desktop">
-    <div class="columns is-multiline is-centered">
-      <div class="column is-12">
-        <h2 class="title is-3">Interactive Answers</h2>
-        <p>Click on the image to display the answer. Please check complete Coding questions <a href="https://colab.research.google.com/drive/1zyEUyM4Nx2NJiTtfMUu3uI3ccZR2lwjR?usp=sharing" target="_blank">here</a>.</p>
-      </div>
-      <!-- 第1个题目 -->
-      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./static/images/math_test_1.png" alt="Question 1" class="question-image" onclick="toggleAnswer('answer1')">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content answer" id="answer1" style="display: none;">
-              <p>Answer: B.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 第2个题目 -->
-      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./static/images/math_test_2.png" alt="Question 2" class="question-image" onclick="toggleAnswer('answer2')">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content answer" id="answer2" style="display: none;">
-              <p>Answer: B.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 第3个题目 -->
-      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./static/images/physics_test_1.png" alt="Question 3" class="question-image" onclick="toggleAnswer('answer3')">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content answer" id="answer3" style="display: none;">
-              <p>Answer: d. </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 第4个题目 -->
-      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./static/images/physics_test_2.png" alt="Question 4" class="question-image" onclick="toggleAnswer('answer4')">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content answer" id="answer4" style="display: none;">
-              <p>Answer: a. </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 第5个题目 -->
-      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./static/images/physics_test_3.png" alt="Question 5" class="question-image" onclick="toggleAnswer('answer5')">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content answer" id="answer5" style="display: none;">
-              <p>Answer: c.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 第6个题目 -->
-      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./static/images/physics_test_4.png" alt="Question 6" class="question-image" onclick="toggleAnswer('answer6')">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content answer" id="answer6" style="display: none;">
-              <p>Answer: A.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 第7个题目 -->
-      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./static/images/chem_test_3.png" alt="Question 7" class="question-image" onclick="toggleAnswer('answer7')">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content answer" id="answer7" style="display: none;">
-              <p>Answer: B.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 第8个题目 -->
-      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./static/images/math_test_5.png" alt="Question 8" class="question-image" onclick="toggleAnswer('answer8')">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content answer" id="answer8" style="display: none;">
-              <p>Answer: 7.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 第9个题目 -->
-      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./static/images/math_test_3.png" alt="Question 9" class="question-image" onclick="toggleAnswer('answer9')">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content answer" id="answer9" style="display: none;">
-              <p>Answer: D</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 第10个题目 -->
-      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./static/images/chem_test_1.png" alt="Question 10" class="question-image" onclick="toggleAnswer('answer10')">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content answer" id="answer10" style="display: none;">
-              <p>Answer: 12.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 第11个题目 -->
-      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./static/images/chem_test_2.png" alt="Question 11" class="question-image" onclick="toggleAnswer('answer11')">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content answer" id="answer11" style="display: none;">
-              <p>Answer: B</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 第12个题目 -->
-      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./static/images/code_test_3.png" alt="Question 12" class="question-image" onclick="toggleAnswer('answer12')">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content answer" id="answer12" style="display: none;">
-              <p>Answer: C.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 第13个题目 -->
-      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./static/images/math_test_4.png" alt="Question 13" class="question-image" onclick="toggleAnswer('answer13')">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content answer" id="answer13" style="display: none;">
-              <p>Answer: C.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 第14个题目 -->
-      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./static/images/physics_test_5.png" alt="Question 12" class="question-image" onclick="toggleAnswer('answer14')">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content answer" id="answer14" style="display: none;">
-              <p>Answer: B.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 第15个题目 -->
-      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./static/images/chem_test_5.png" alt="Question 15" class="question-image" onclick="toggleAnswer('answer15')">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content answer" id="answer15" style="display: none;">
-              <p>Answer: B</p>
-            </div>
-          </div>
-        </div>
-      </div>   
-      
-      <!-- 第16个题目 -->
-      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./static/images/chem_test_4.png" alt="Question 16" class="question-image" onclick="toggleAnswer('answer16')">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content answer" id="answer16" style="display: none;">
-              <p>Answer: C.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 第17个题目 -->
-      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./static/images/code_test_4.png" alt="Question 17" class="question-image" onclick="toggleAnswer('answer17')">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content answer" id="answer17" style="display: none;">
-              <p>Answer: A.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- 第18个题目 -->
-      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./static/images/code_test_1.png" alt="Question 18" class="question-image" onclick="toggleAnswer('answer18')">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content answer" id="answer18" style="display: none;">
-              <p>Answer: D.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 第19个题目 -->
-      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./static/images/code_test_2.png" alt="Question 19" class="question-image" onclick="toggleAnswer('answer19')">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content answer" id="answer19" style="display: none;">
-              <p>Answer: D.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-<script>
-  // 这个函数用于切换答案的显示与隐藏
-  function toggleAnswer(answerId) {
-    var answerElement = document.getElementById(answerId);
-    if (answerElement.style.display === "none" || answerElement.style.display === "") {
-      answerElement.style.display = "block";
-    } else {
-      answerElement.style.display = "none";
-    }
-  }
-</script>
 
 <!-- EMMA Case Examples Section -->
 <section class="section">
@@ -909,6 +560,328 @@
 <!-- Lightbox.js -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+
+<section class="section" id="interactive-questions">
+  <div class="container is-max-desktop">
+    <div class="columns is-multiline is-centered">
+      <div class="column is-12">
+        <h2 class="title is-3">Interactive Answers</h2>
+        <p>Click on the image to display the answer. Please check complete Coding questions <a href="https://colab.research.google.com/drive/1zyEUyM4Nx2NJiTtfMUu3uI3ccZR2lwjR?usp=sharing" target="_blank">here</a>.</p>
+      </div>
+
+      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./static/images/math_test_1.png" alt="Question 1" class="question-image" onclick="toggleAnswer('answer1')">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content answer" id="answer1" style="display: none;">
+              <p>Answer: B.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./static/images/math_test_2.png" alt="Question 2" class="question-image" onclick="toggleAnswer('answer2')">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content answer" id="answer2" style="display: none;">
+              <p>Answer: B.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./static/images/physics_test_1.png" alt="Question 3" class="question-image" onclick="toggleAnswer('answer3')">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content answer" id="answer3" style="display: none;">
+              <p>Answer: d. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./static/images/physics_test_2.png" alt="Question 4" class="question-image" onclick="toggleAnswer('answer4')">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content answer" id="answer4" style="display: none;">
+              <p>Answer: a. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./static/images/physics_test_3.png" alt="Question 5" class="question-image" onclick="toggleAnswer('answer5')">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content answer" id="answer5" style="display: none;">
+              <p>Answer: c.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./static/images/physics_test_4.png" alt="Question 6" class="question-image" onclick="toggleAnswer('answer6')">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content answer" id="answer6" style="display: none;">
+              <p>Answer: A.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第7个题目 -->
+      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./static/images/chem_test_3.png" alt="Question 7" class="question-image" onclick="toggleAnswer('answer7')">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content answer" id="answer7" style="display: none;">
+              <p>Answer: B.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./static/images/math_test_5.png" alt="Question 8" class="question-image" onclick="toggleAnswer('answer8')">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content answer" id="answer8" style="display: none;">
+              <p>Answer: 7.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./static/images/math_test_3.png" alt="Question 9" class="question-image" onclick="toggleAnswer('answer9')">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content answer" id="answer9" style="display: none;">
+              <p>Answer: D</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./static/images/chem_test_1.png" alt="Question 10" class="question-image" onclick="toggleAnswer('answer10')">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content answer" id="answer10" style="display: none;">
+              <p>Answer: 12.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./static/images/chem_test_2.png" alt="Question 11" class="question-image" onclick="toggleAnswer('answer11')">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content answer" id="answer11" style="display: none;">
+              <p>Answer: B</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./static/images/code_test_3.png" alt="Question 12" class="question-image" onclick="toggleAnswer('answer12')">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content answer" id="answer12" style="display: none;">
+              <p>Answer: C.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./static/images/math_test_4.png" alt="Question 13" class="question-image" onclick="toggleAnswer('answer13')">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content answer" id="answer13" style="display: none;">
+              <p>Answer: C.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./static/images/physics_test_5.png" alt="Question 12" class="question-image" onclick="toggleAnswer('answer14')">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content answer" id="answer14" style="display: none;">
+              <p>Answer: B.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./static/images/chem_test_5.png" alt="Question 15" class="question-image" onclick="toggleAnswer('answer15')">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content answer" id="answer15" style="display: none;">
+              <p>Answer: B</p>
+            </div>
+          </div>
+        </div>
+      </div>   
+      
+
+      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./static/images/chem_test_4.png" alt="Question 16" class="question-image" onclick="toggleAnswer('answer16')">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content answer" id="answer16" style="display: none;">
+              <p>Answer: C.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./static/images/code_test_4.png" alt="Question 17" class="question-image" onclick="toggleAnswer('answer17')">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content answer" id="answer17" style="display: none;">
+              <p>Answer: A.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./static/images/code_test_1.png" alt="Question 18" class="question-image" onclick="toggleAnswer('answer18')">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content answer" id="answer18" style="display: none;">
+              <p>Answer: D.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./static/images/code_test_2.png" alt="Question 19" class="question-image" onclick="toggleAnswer('answer19')">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content answer" id="answer19" style="display: none;">
+              <p>Answer: D.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<script>
+  function toggleAnswer(answerId) {
+    var answerElement = document.getElementById(answerId);
+    if (answerElement.style.display === "none" || answerElement.style.display === "") {
+      answerElement.style.display = "block";
+    } else {
+      answerElement.style.display = "none";
+    }
+  }
+</script>
 
 
 <section class="section" id="BibTeX">
