@@ -300,6 +300,29 @@
     },
     {
       "info": {
+        "name": "claude-3-7-sonnet-20250219",
+        "CoT": "-",
+        "type": "proprietary",
+        "size": "-",
+        "link": "https://claude.ai/" 
+      },
+      "emma": {
+        "overall": "-",
+        "math": "-",
+        "physics": "-",
+        "chemistry": "-",
+        "coding": "-"
+      },
+      "emma-mini": {
+        "overall": "56.50",
+        "math": "45.00",
+        "physics": "65.00",
+        "chemistry": "63.00",
+        "coding": "53.00"
+      }
+    },
+    {
+      "info": {
         "name": "qwen2-vl-72b-instruct",
         "CoT": "true",
         "type": "open_source",
