@@ -550,6 +550,52 @@
         "chemistry": "46.00",
         "coding": "34.00"
       }
+    },
+    {
+      "info": {
+        "name": "Qwen2.5-VL-72B-Instruct",
+        "CoT": "true",
+        "type": "open_source",
+        "size": "72B",
+        "link": "https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct"
+      },
+      "emma": {
+        "overall": "-",
+        "math": "-",
+        "physics": "-",
+        "chemistry": "-",
+        "coding": "-"
+      },
+      "emma-mini": {
+        "overall": "39.25",
+        "math": "39.00",
+        "physics": "37.00",
+        "chemistry": "40.00",
+        "coding": "41.00"
+      }
+    },
+    {
+      "info": {
+        "name": "Qwen2.5-VL-72B-Instruct",
+        "CoT": "false",
+        "type": "open_source",
+        "size": "72B",
+        "link": "https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct"
+      },
+      "emma": {
+        "overall": "-",
+        "math": "-",
+        "physics": "-",
+        "chemistry": "-",
+        "coding": "-"
+      },
+      "emma-mini": {
+        "overall": "40.5",
+        "math": "44.00",
+        "physics": "39.00",
+        "chemistry": "40.00",
+        "coding": "39.00"
+      }
     }
   ]
 }
