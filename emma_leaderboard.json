@@ -458,6 +458,52 @@
         "chemistry": "24.00",
         "coding": "31.00"
       }
+    },
+    {
+      "info": {
+        "name": "InternVL3-78B",
+        "CoT": "true",
+        "type": "open_source",
+        "size": "78B",
+        "link": "https://huggingface.co/OpenGVLab/InternVL3-78B"
+      },
+      "emma": {
+        "overall": "-",
+        "math": "-",
+        "physics": "-",
+        "chemistry": "-",
+        "coding": "-"
+      },
+      "emma-mini": {
+        "overall": "38.25",
+        "math": "31.00",
+        "physics": "46.00",
+        "chemistry": "42.00",
+        "coding": "34.00"
+      }
+    },
+    {
+      "info": {
+        "name": "InternVL3-78B",
+        "CoT": "false",
+        "type": "open_source",
+        "size": "78B",
+        "link": "https://huggingface.co/OpenGVLab/InternVL3-78B"
+      },
+      "emma": {
+        "overall": "-",
+        "math": "-",
+        "physics": "-",
+        "chemistry": "-",
+        "coding": "-"
+      },
+      "emma-mini": {
+        "overall": "38.5",
+        "math": "34.00",
+        "physics": "40.00",
+        "chemistry": "46.00",
+        "coding": "34.00"
+      }
     }
   ]
 }
