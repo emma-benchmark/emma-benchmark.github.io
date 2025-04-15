@@ -168,20 +168,20 @@ body {
 
 
 .answer {
-  display: none; /* 默认隐藏答案 */
+  display: none; 
 }
 
 .question-image {
-  object-fit: contain;  /* 或者使用 'cover'，根据需求选择 */
-  width: 100%; /* 保证图片宽度占满容器 */
-  height: 100%; /* 保证图片高度占满容器 */
+  object-fit: contain;  
+  width: 100%; 
+  height: 100%; 
 }
 
 .container {
-  max-width: 1200px; /* 调整宽度，可以根据实际需要来修改 */
-  width: 100%;       /* 设置容器的宽度为100% */
-  margin: 0 auto;    /* 居中对齐 */
-  padding: 20px;     /* 给容器添加一些内边距 */
+  max-width: 1200px; 
+  width: 100%;       
+  margin: 0 auto;    
+  padding: 20px;    
 }
 
 
@@ -225,7 +225,7 @@ body {
 }
 
 
-/* 样式表 (style.css) */
+
 
 body {
   font-family: Arial, sans-serif;
@@ -235,21 +235,20 @@ body {
 }
 
 .container {
-  max-width: 1200px;  /* 控制页面最大宽度 */
-  margin: 0 auto;     /* 居中显示 */
-  padding: 20px;      /* 给容器一些内边距 */
+  max-width: 1200px;  
+  margin: 0 auto;    
+  padding: 20px;      
 }
 
 
 
-/* 设置段落、标题等文本的对齐方式 */
 .content p {
   margin: 0 ;
   padding: 0;
-  text-align: justify; /* 或者根据需求使用 left、center */
+  text-align: justify; 
 }
 
-/* 内容样式 */
+
 .content {
   font-size: 18px;
   line-height: 1.4;
@@ -258,17 +257,59 @@ body {
 }
 
 .section {
-  padding-top: 0; /* 去除section顶部的默认内边距 */
-  margin-top: 0;  /* 去除section顶部的默认外边距 */
+  padding-top: 0; 
+  margin-top: 0;  
 }
 
 .container {
-  padding-top: 10px; /* 调整container顶部的内边距 */
-  margin-top: 0;     /* 去除container顶部的外边距 */
+  padding-top: 10px; 
+  margin-top: 0;     
 }
 
 .leaderboard-description {
-  text-align: center;   /* 水平居中 */
-  font-size: 16px;       /* 设置字体大小 */
-  margin-top: 10px;      /* 上边距 */
+  text-align: center;   
+  font-size: 16px;       
+  margin-top: 10px;      
+}
+
+
+.case-image {
+  width: 100%;  
+  max-height: 500px; 
+  object-fit: contain; 
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.case-image:hover {
+  transform: scale(1.05);
+}
+
+.results-carousel .box {
+    height: auto; 
+    min-height: 450px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.case-image {
+    width: 100%;
+    max-height: 500px; 
+    object-fit: contain; 
+    border-radius: 10px;
+}
+
+
+.results-carousel {
+    display: flex;
+    gap: 120px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
 }

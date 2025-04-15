@@ -81,8 +81,8 @@ $(document).ready(function() {
 function toggleAnswer(answerId) {
   var answerElement = document.getElementById(answerId);
   if (answerElement.style.display === "none" || answerElement.style.display === "") {
-     answerElement.style.display = "block";  // 展示答案
+     answerElement.style.display = "block";  
   } else {
-     answerElement.style.display = "none";  // 隐藏答案
+     answerElement.style.display = "none";  
   }
 }

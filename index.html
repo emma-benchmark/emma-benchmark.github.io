@@ -32,9 +32,9 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/vision.png">
+  <link rel="icon" href="./static/images/emma_web_logo.png">
 
-  <link rel="stylesheet" href="./static/css/index_mmmu.css">
+  <link rel="stylesheet" href="./static/css/index_emma.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -47,11 +47,11 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       bulmaCarousel.attach('#pdf-carousel', {
-        slidesToScroll: 1,  // 每次滚动一个
-        slidesToShow: 1,    // 每次展示一个
-        loop: true,         // 启用循环滚动
-        autoplay: true,     // 自动滚动
-        autoplaySpeed: 5000 // 每 5 秒切换
+        slidesToScroll: 1,  
+        slidesToShow: 1,    
+        loop: true,         
+        autoplay: true,     
+        autoplaySpeed: 5000 
       });
     });
   </script>
@@ -67,18 +67,14 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
 
-          <!-- 新增图片 -->
           <img src="./static/images/emma.png" alt="EMMA Logo" style="max-width: 200px; margin-bottom: 1rem;">
-          <!-- <h1 class="title is-1 publication-title">An Enhanced MultiModal ReAsoning Benchmark</h1>-->
-          <!-- <h2 class="subtitle is-3 publication-subtitle">An Enhanced MultiModal ReAsoning Benchmark</h2> -->
-          <!-- <h2 class="subtitle is-3 publication-subtitle">Can MLLMs Reason/Think in Multimodality?</h2> -->
           <h2 class="title is-3">An Enhanced MultiModal ReAsoning Benchmark</h2>
           <h2 class="subtitle is-3 publication-subtitle">Can MLLMs Reason in Multimodality?</h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://scholar.google.com/citations?user=0SPl0hcAAAAJ&hl=zh-CN">Yunzhuo Hao</a><sup>1</sup>*</span>,
             <span class="author-block">
-              <a href="#">Jiawei Gu</a><sup>2</sup>*</span>,
+              <a href="mailto:kuvvius@gmail.com">Jiawei Gu</a><sup>2</sup>*</span>,
             <span class="author-block">
               <a href="https://scholar.google.com/citations?user=P8MF9AQAAAAJ&hl=en">Huichen Will Wang</a><sup>3</sup>*</span>,
             <span class="author-block">
@@ -105,7 +101,6 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
               <span class="link-block">
                 <a href="https://www.arxiv.org/pdf/2501.05444"
                    class="external-link button is-normal is-rounded is-dark">
@@ -136,17 +131,6 @@
                   <span>EMMA-mini</span>
                 </a>
               </span>
-<!--              &lt;!&ndash; Video Link. &ndash;&gt;-->
-<!--              <span class="link-block">-->
-<!--                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"-->
-<!--                   class="external-link button is-normal is-rounded is-dark">-->
-<!--                  <span class="icon">-->
-<!--                      <i class="fab fa-youtube"></i>-->
-<!--                  </span>-->
-<!--                  <span>Video</span>-->
-<!--                </a>-->
-<!--              </span>-->
-              <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/hychaochao/EMMA"
                    class="external-link button is-normal is-rounded is-dark">
@@ -156,16 +140,6 @@
                   <span>Code</span>
                   </a>
               </span>
-<!--              &lt;!&ndash; Dataset Link. &ndash;&gt;-->
-<!--              <span class="link-block">-->
-<!--                <a href="https://github.com/google/nerfies/releases/tag/0.1"-->
-<!--                   class="external-link button is-normal is-rounded is-dark">-->
-<!--                  <span class="icon">-->
-<!--                      <i class="far fa-images"></i>-->
-<!--                  </span>-->
-<!--                  <span>Data</span>-->
-<!--                  </a>-->
-<!--              </span>-->
               <span class="link-block">
                 <a href="#leaderboard" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon has-text-white">🏆</span>
@@ -177,14 +151,6 @@
                   <span class="icon has-text-white">🌐</span>
                   <span>Twitter</span>
                 </a>
-              <!-- </span>
-              <span class="link-block">
-                <a href="#interactive-questions" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon has-text-white">
-                    <span class="icon has-text-white">🧩</span>
-                    <span>Examples</span>
-                </a>
-              </span> -->
             </div>
           </div>
 
@@ -197,11 +163,12 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body has-text-centered">
-      <!-- 添加图片 -->
-      <img src="./static/images/EMMA_00.png" alt="EMMA Category Overview" style="max-width: 100%; height: auto;" id="EMMA_figure">
-      <!-- 图片说明文字 -->
+      <h2 class="subtitle has-text-centered">      
+        We encourage readers to answer the sample questions, note their approach, and check the provided answers <a href="#interactive-questions" style="color: inherit; text-decoration: underline;">below</a>.
+      </h2>
+        <img src="./static/images/EMMA_00.png" alt="EMMA Category Overview" style="max-width: 100%; height: auto;" id="EMMA_figure">
       <h2 class="subtitle has-text-centered">
-        Overview of the EMMA categories. The answers to the displayed questions are provided <a href="#interactive-questions" style="color: inherit; text-decoration: underline;">below</a> . 
+        Overview of the EMMA categories. 
       </h2>
     </div>
   </div>
@@ -213,9 +180,20 @@
 
 <section class="section">
   <div class="container" style="margin-bottom: 2vh;">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
+        <h2 class="title is-3">🔔News</h2>
+        <div class="content has-text-justified">
+          <p>  
+            <b>🔥 [2025-03-02]</b>: Exciting updates on the <b><a href="#leaderboard">Leaderboard</a></b>!  We've added <i>claude-3-7-sonnet-20250219</i> and <i>kimi-k1.5-Preview</i> performances. Currently, <b>claude-3-7-sonnet-20250219🥇</b>, <b>Gemini-2.0-Flash-Thinking-exp-0121🥈</b>, and <b>o1🥉</b> on EMMA-Mini.  
+          </p>
+          <p>  
+            <b>🔥 [2025-01-28]</b>: We've added <i>Gemini-2.0-Flash-Thinking-0121</i> and <i>QVQ-72B-Preview</i> performances on the <b><a href="#leaderboard">Leaderboard</a></b>!
+          </p>
+                
+            <b>🚀 [2025-01-09]</b>: We released <b><a href="https://www.arxiv.org/abs/2501.05444">EMMA</a></b>, a benchmark for advanced multimodal reasoning. 🥳
+          </p>
+      </div>
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
@@ -256,27 +234,21 @@
           <div class="table-wrapper">
             <table id="emma-table">
               <thead>
-                <!-- 第一行表头：Reset、两大分区（EMMA, EMMA-Mini） -->
                 <tr>
                   <th colspan="3" class="reset-cell clickable" style="text-align: center;">Reset</th>
                   <th class="emma-details-cell clickable" colspan="1">EMMA</th>
                   <th class="emma-mini-details-cell clickable" colspan="1">EMMA-Mini</th>
                 </tr>
-                <!-- 第二行表头：Name, Size, CoT, 以及两大分区的详细列 -->
                 <tr>
                   <th class="sortable clickable" data-sort="string">Name</th>
                   <th class="clickable" data-sort="string">Size</th>
-                  <!-- 新增：CoT 列，data-sort 用什么都行，可以用 "string" 或自定义 "cot" 等 -->
                   <th class="sortable clickable" data-sort="string">CoT prompting</th>
-
-                  <!-- EMMA 区域 -->
                   <th class="sortable clickable emma-overall" data-sort="number">Overall</th>
                   <th class="hidden emma-details sortable clickable" data-sort="number">Math</th>
                   <th class="hidden emma-details sortable clickable" data-sort="number">Physics</th>
                   <th class="hidden emma-details sortable clickable" data-sort="number">Chemistry</th>
                   <th class="hidden emma-details sortable clickable" data-sort="number">Coding</th>
 
-                  <!-- EMMA-Mini 区域 -->
                   <th class="sortable clickable emma-mini-overall" data-sort="number">Overall</th>
                   <th class="hidden emma-mini-details sortable clickable" data-sort="number">Math</th>
                   <th class="hidden emma-mini-details sortable clickable" data-sort="number">Physics</th>
@@ -289,7 +261,7 @@
               </tbody>
             </table>
             <p class="test-desc">Overall results of different models on the EMMA leaderboard.
-              The best-performing model in each category is in-bold, and the second best is underlined.</p>
+              The best-performing model in each category is <b>in-bold</b>, and the second best is <u>underlined</u>.</p>
           </div>
         </div>
       </div>
@@ -321,27 +293,9 @@
             As shown in  <a href="#EMMA_figure" style="text-decoration: underline; color: inherit;">Category Figure</a>, questions in EMMA <b>assess a wide array of multimodal reasoning skills</b>. For example, the pattern inference problem in math challenges models to identify and generalize visual patterns; the visual decomposition simulation problem in physics requires graphically decomposing forces to determine resultant effects; the reaction simulation problem in chemistry demands precise interpretation and simulation of electron movement; the 3D visualization problem in coding. 
             <!-- a compilation of data 1) carefully examined and filtered from 28 existing VQA and MathQA datasets and 2) manually collected by us. In total, 6,141 examples were collected from 31 different datasets. -->
           </p>
-
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/our_new_3_datasets.png" alt="algebraic reasoning" width="80%"/>
-                <p> Examples of our newly annotated datasets: IQTest, FunctionQA, and PaperQA.</p>
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/source_dataset.png" alt="arithmetic reasoning" width="50%"/>
-                <p> Summary of the 31 different source datasets in <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-                  <span class="mathvista">MathVista</span>.
-              </div>
-            </div>
-          </div>
-
-
           <p>
             <ul>
-              <li><b>EMMA-mini</b>: To create a more balanced subset of EMMA, we randomly sample 400 questions (100 per subject) from the benchmark, hereafter referred to as EMMA-mini.</li>
+              <li><b>EMMA-mini</b>: To create a more balanced subset of EMMA, we randomly sample <b>400 questions</b> (100 per subject) from the benchmark, hereafter referred to as EMMA-mini.</li>
             </ul>
           </p>
 
@@ -362,13 +316,12 @@
     </div>
 
 <div class="container" style="margin-bottom: 2vh;">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Test-time Compute Scaling</h2>
         <div class="content has-text-justified">
           <p>
-            We also try various test-time compute scaling strategies. While they tend to boost model performance, they are far from enough to close the gap to human-level performance. The best model and scaling strategy configuration we try still trails humans by 27%.
+            We also try various test-time compute scaling strategies. While they tend to boost model performance, they are far from enough to close the gap to human-level performance. <b> The best model and scaling strategy configuration we try still trails humans by 27%</b>.
           </p>
         </div>
         <img src="./static/images/test-time-compute.png" alt="Motivation" style="width: 100%; max-width: 1000px; margin-top: 20px;"/>
@@ -384,7 +337,6 @@
         <h2 class="title is-3">Error Analysis</h2>
         <div class="content has-text-justified">
 
-          <!-- 第一张图与分析段落 -->
           <div class="columns is-centered">
             <div class="column is-half">
               <div class="box m-5">
@@ -395,7 +347,6 @@
               </div>
             </div>
 
-            <!-- 第二张图与分析段落 -->
             <div class="column is-half">
               <div class="box m-5">
                 <div class="content has-text-centered">
@@ -412,6 +363,184 @@
 </section>
 
 
+<!-- EMMA Case Examples Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Examples</h2>
+
+    <div id="pdf-carousel" class="carousel results-carousel">
+      
+      <!-- Math Case -->
+      <div class="box case-box">
+        <div class="content has-text-centered">
+          <a href="./static/images/math-case-1.png" data-lightbox="emma-cases" data-title="Math Case 1">
+            <img src="./static/images/math-case-1.png" alt="Math Case 1" class="case-image"/>
+          </a>
+          <p>Math Case 1</p>
+        </div>
+      </div>
+      <!-- Math Case 2-->
+      <div class="box case-box">
+        <div class="content has-text-centered">
+          <a href="./static/images/math-case-2.png" data-lightbox="emma-cases" data-title="Math Case 2">
+            <img src="./static/images/math-case-2.png" alt="Math Case 2" class="case-image"/>
+          </a>
+          <p>Math Case 2</p>
+        </div>
+      </div>
+
+      <!-- Physics Case 1 -->
+      <div class="box case-box">
+        <div class="content has-text-centered">
+          <a href="./static/images/physics-case-1.png" data-lightbox="emma-cases" data-title="Physics Case 1">
+            <img src="./static/images/physics-case-1.png" alt="Physics Case 1" class="case-image"/>
+          </a>
+          <p>Physics Case 1</p>
+        </div>
+      </div>
+
+      <!-- Physics Case 2 -->
+      <div class="box case-box">
+        <div class="content has-text-centered">
+          <a href="./static/images/physics-case-2.png" data-lightbox="emma-cases" data-title="Physics Case 2">
+            <img src="./static/images/physics-case-2.png" alt="Physics Case 2" class="case-image"/>
+          </a>
+          <p>Physics Case 2</p>
+        </div>
+      </div>
+
+      <!-- Chemistry Case -->
+      <div class="box case-box">
+        <div class="content has-text-centered">
+          <a href="./static/images/chemistry-case-1.png" data-lightbox="emma-cases" data-title="Chemistry Case 1">
+            <img src="./static/images/chemistry-case-1.png" alt="Chemistry Case 1" class="case-image"/>
+          </a>
+          <p>Chemistry Case 1</p>
+        </div>
+      </div>
+
+      <!-- Physics Case 3 -->
+      <div class="box case-box">
+        <div class="content has-text-centered">
+          <a href="./static/images/physics-case-3.png" data-lightbox="emma-cases" data-title="Physics Case 3">
+            <img src="./static/images/physics-case-3.png" alt="Physics Case 3" class="case-image"/>
+          </a>
+          <p>Physics Case 3</p>
+        </div>
+      </div>      
+
+      <!-- Coding Case 1 -->
+      <div class="box case-box">
+        <div class="content has-text-centered">
+          <a href="./static/images/coding-case-1.png" data-lightbox="emma-cases" data-title="Coding Case 1">
+            <img src="./static/images/coding-case-1.png" alt="Coding Case 1" class="case-image"/>
+          </a>
+          <p>Coding Case 1</p>
+        </div>
+      </div>
+
+      <!-- Coding Case 2 -->
+      <div class="box case-box">
+        <div class="content has-text-centered">
+          <a href="./static/images/coding-case-2.png" data-lightbox="emma-cases" data-title="Coding Case 2">
+            <img src="./static/images/coding-case-2.png" alt="Coding Case 2" class="case-image"/>
+          </a>
+          <p>Coding Case 2</p>
+        </div>
+      </div>
+
+
+      <!-- Physics Case 4 -->
+      <div class="box case-box">
+        <div class="content has-text-centered">
+          <a href="./static/images/physics-case-4.png" data-lightbox="emma-cases" data-title="Physics Case 4">
+            <img src="./static/images/physics-case-4.png" alt="Physics Case 4" class="case-image"/>
+          </a>
+          <p>Physics Case 4</p>
+        </div>
+      </div>
+
+      <!-- Physics Case 5 -->
+      <div class="box case-box">
+        <div class="content has-text-centered">
+          <a href="./static/images/physics-case-5.png" data-lightbox="emma-cases" data-title="Physics Case 5">
+            <img src="./static/images/physics-case-5.png" alt="Physics Case 5" class="case-image"/>
+          </a>
+          <p>Physics Case 5</p>
+        </div>
+      </div>
+
+      <!-- Physics Case 6 -->
+      <div class="box case-box">
+        <div class="content has-text-centered">
+          <a href="./static/images/physics-case-6.png" data-lightbox="emma-cases" data-title="Physics Case 6">
+            <img src="./static/images/physics-case-6.png" alt="Physics Case 6" class="case-image"/>
+          </a>
+          <p>Physics Case 6</p>
+        </div>
+      </div>      
+
+      <!-- Math Case 3-->
+      <div class="box case-box">
+        <div class="content has-text-centered">
+          <a href="./static/images/math-case-3.png" data-lightbox="emma-cases" data-title="Math Case 3">
+            <img src="./static/images/math-case-3.png" alt="Math Case 3" class="case-image"/>
+          </a>
+          <p>Math Case 3</p>
+        </div>
+      </div>      
+
+      <!-- Math Case 4-->
+      <div class="box case-box">
+        <div class="content has-text-centered">
+          <a href="./static/images/math-case-4.png" data-lightbox="emma-cases" data-title="Math Case 4">
+            <img src="./static/images/math-case-4.png" alt="Math Case 4" class="case-image"/>
+          </a>
+          <p>Math Case 4</p>
+        </div>
+      </div>    
+
+      <!-- Math Case 5-->
+      <div class="box case-box">
+        <div class="content has-text-centered">
+          <a href="./static/images/math-case-5.png" data-lightbox="emma-cases" data-title="Math Case 5">
+            <img src="./static/images/math-case-5.png" alt="Math Case 5" class="case-image"/>
+          </a>
+          <p>Math Case 5</p>
+        </div>
+      </div>    
+
+      <!-- Math Case 6-->
+      <div class="box case-box">
+        <div class="content has-text-centered">
+          <a href="./static/images/math-case-6.png" data-lightbox="emma-cases" data-title="Math Case 6">
+            <img src="./static/images/math-case-6.png" alt="Math Case 6" class="case-image"/>
+          </a>
+          <p>Math Case 6</p>
+        </div>
+      </div>          
+
+      <!-- Math Case 7-->
+      <div class="box case-box">
+        <div class="content has-text-centered">
+          <a href="./static/images/math-case-7.png" data-lightbox="emma-cases" data-title="Math Case 7">
+            <img src="./static/images/math-case-7.png" alt="Math Case 7" class="case-image"/>
+          </a>
+          <p>Math Case 7</p>
+        </div>
+      </div>     
+
+    </div>
+
+    <p class="has-text-centered">More examples detailed in the paper.</p>
+  </div>
+</section>
+
+<!-- Lightbox.js -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+
 <section class="section" id="interactive-questions">
   <div class="container is-max-desktop">
     <div class="columns is-multiline is-centered">
@@ -419,7 +548,7 @@
         <h2 class="title is-3">Interactive Answers</h2>
         <p>Click on the image to display the answer. Please check complete Coding questions <a href="https://colab.research.google.com/drive/1zyEUyM4Nx2NJiTtfMUu3uI3ccZR2lwjR?usp=sharing" target="_blank">here</a>.</p>
       </div>
-      <!-- 第1个题目 -->
+
       <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
         <div class="card">
           <div class="card-image">
@@ -435,7 +564,7 @@
         </div>
       </div>
 
-      <!-- 第2个题目 -->
+
       <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
         <div class="card">
           <div class="card-image">
@@ -451,7 +580,7 @@
         </div>
       </div>
 
-      <!-- 第3个题目 -->
+
       <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
         <div class="card">
           <div class="card-image">
@@ -467,7 +596,7 @@
         </div>
       </div>
 
-      <!-- 第4个题目 -->
+
       <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
         <div class="card">
           <div class="card-image">
@@ -483,7 +612,6 @@
         </div>
       </div>
 
-      <!-- 第5个题目 -->
       <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
         <div class="card">
           <div class="card-image">
@@ -499,7 +627,7 @@
         </div>
       </div>
 
-      <!-- 第6个题目 -->
+
       <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
         <div class="card">
           <div class="card-image">
@@ -531,7 +659,7 @@
         </div>
       </div>
 
-      <!-- 第8个题目 -->
+
       <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
         <div class="card">
           <div class="card-image">
@@ -547,7 +675,7 @@
         </div>
       </div>
 
-      <!-- 第9个题目 -->
+
       <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
         <div class="card">
           <div class="card-image">
@@ -563,7 +691,7 @@
         </div>
       </div>
 
-      <!-- 第10个题目 -->
+
       <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
         <div class="card">
           <div class="card-image">
@@ -579,7 +707,7 @@
         </div>
       </div>
 
-      <!-- 第11个题目 -->
+
       <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
         <div class="card">
           <div class="card-image">
@@ -595,7 +723,7 @@
         </div>
       </div>
 
-      <!-- 第12个题目 -->
+
       <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
         <div class="card">
           <div class="card-image">
@@ -611,7 +739,7 @@
         </div>
       </div>
 
-      <!-- 第13个题目 -->
+
       <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
         <div class="card">
           <div class="card-image">
@@ -627,7 +755,7 @@
         </div>
       </div>
 
-      <!-- 第14个题目 -->
+
       <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
         <div class="card">
           <div class="card-image">
@@ -643,7 +771,6 @@
         </div>
       </div>
 
-      <!-- 第15个题目 -->
       <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
         <div class="card">
           <div class="card-image">
@@ -659,7 +786,7 @@
         </div>
       </div>   
       
-      <!-- 第16个题目 -->
+
       <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
         <div class="card">
           <div class="card-image">
@@ -674,7 +801,7 @@
           </div>
         </div>
       </div>
-      <!-- 第17个题目 -->
+
       <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
         <div class="card">
           <div class="card-image">
@@ -690,7 +817,7 @@
         </div>
       </div>
       
-      <!-- 第18个题目 -->
+
       <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
         <div class="card">
           <div class="card-image">
@@ -706,7 +833,7 @@
         </div>
       </div>
 
-      <!-- 第19个题目 -->
+
       <div class="column is-full-mobile is-half-tablet is-one-quarter-desktop">
         <div class="card">
           <div class="card-image">
@@ -723,7 +850,6 @@
       </div>
 
 <script>
-  // 这个函数用于切换答案的显示与隐藏
   function toggleAnswer(answerId) {
     var answerElement = document.getElementById(answerId);
     if (answerElement.style.display === "none" || answerElement.style.display === "") {
@@ -733,156 +859,6 @@
     }
   }
 </script>
-
-
-<!-- <div class="columns is-centered m-6">
-  <div class="column is-full has-text-centered content">
-    <h2 class="title is-3">Examples</h2>
-    <div id="results-carousel" class="carousel results-carousel">
-      <div class="box m-5">
-        <div class="content has-text-centered">
-          <img src="./static/images/math-case-1.png" alt="arithmetic reasoning" width="60%"/>
-          <p>Arithmetic Reasoning</p>
-        </div>
-      </div>
-      <div class="box m-5">
-        <div class="content has-text-centered">
-          <img src="./static/images/physics-case-2.png" alt="algebraic reasoning" width="60%"/>
-          <p>Algebraic Reasoning</p>
-        </div>
-      </div>
-      <div class="box m-5">
-        <div class="content has-text-centered">
-          <img src="./static/images/physics-case-1.png" alt="geometric reasoning" width="60%"/>
-          <p>Geometric Reasoning</p>
-        </div>
-      </div>
-      <div class="box m-5">
-        <div class="content has-text-centered">
-          <img src="./static/images/chemistry-case-1.png" alt="logical reasoning" width="60%"/>
-          <p>Logical Reasoning</p>
-        </div>
-      </div>
-      <div class="box m-5">
-        <div class="content has-text-centered">
-          <img src="static/images/examples/num.png" alt="numeric reasoning" width="60%"/>
-          <p>Numeric Reasoning</p>
-        </div>
-      </div>
-      <div class="box m-5">
-        <div class="content has-text-centered">
-          <img src="static/images/examples/sta.png" alt="statistical reasoning" width="60%"/>
-          <p>Statistical Reasoning</p>
-        </div>
-      </div>
-      <div class="box m-5">
-        <div class="content has-text-centered">
-          <img src="static/images/examples/sci.png" alt="scientific reasoning" width="60%"/>
-          <p>Scientific Reasoning</p>
-        </div>
-      </div> 
-    </div> 
-  </div>
-</div> -->
-
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">EMMA Case Examples</h2>
-
-
-        <div id="pdf-carousel" class="carousel results-carousel">
-
-          <!-- 数学案例 -->
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="./static/images/math-case-1.png" alt="Math Case 1"
-                   style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/>
-              <p>Math Case 1</p>
-            </div>
-          </div>
-
-          <!-- 物理案例 1 -->
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="./static/images/physics-case-1.png" alt="Physics Case 1"
-                   style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/>
-              <p>Physics Case 1</p>
-            </div>
-          </div>
-
-          <!-- 物理案例 2 -->
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="./static/images/physics-case-2.png" alt="Physics Case 2"
-                   style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/>
-              <p>Physics Case 2</p>
-            </div>
-          </div>
-
-          <!-- 化学案例 -->
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="./static/images/chemistry-case-1.png" alt="Chemistry Case 1"
-                   style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/>
-              <p>Chemistry Case 1</p>
-            </div>
-          </div>
-        </div>
-        <p class="has-text-centered">
-          More examples detailed in the paper.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <!-- <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Concurrent Work. -->
-
-  </div>
-</section>
-
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
