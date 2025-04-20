@@ -514,11 +514,11 @@
         "link": "https://huggingface.co/OpenGVLab/InternVL3-78B"
       },
       "emma": {
-        "overall": "-",
-        "math": "-",
-        "physics": "-",
-        "chemistry": "-",
-        "coding": "-"
+        "overall": "33.72",
+        "math": "32.74",
+        "physics": "49.36",
+        "chemistry": "32.48",
+        "coding": "33.51"
       },
       "emma-mini": {
         "overall": "38.25",
@@ -537,11 +537,11 @@
         "link": "https://huggingface.co/OpenGVLab/InternVL3-78B"
       },
       "emma": {
-        "overall": "-",
-        "math": "-",
-        "physics": "-",
-        "chemistry": "-",
-        "coding": "-"
+        "overall": "34.79",
+        "math": "33.07",
+        "physics": "37.82",
+        "chemistry": "34.44",
+        "coding": "37.41"
       },
       "emma-mini": {
         "overall": "38.5",
@@ -560,11 +560,11 @@
         "link": "https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct"
       },
       "emma": {
-        "overall": "-",
-        "math": "-",
-        "physics": "-",
-        "chemistry": "-",
-        "coding": "-"
+        "overall": "36.06",
+        "math": "36.21",
+        "physics": "38.46",
+        "chemistry": "32.14",
+        "coding": "37.41"
       },
       "emma-mini": {
         "overall": "39.25",
@@ -583,11 +583,11 @@
         "link": "https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct"
       },
       "emma": {
-        "overall": "-",
-        "math": "-",
-        "physics": "-",
-        "chemistry": "-",
-        "coding": "-"
+        "overall": "38.56",
+        "math": "36.55",
+        "physics": "36.54",
+        "chemistry": "40.73",
+        "coding": "40.43"
       },
       "emma-mini": {
         "overall": "40.5",
