@@ -70,6 +70,29 @@
     },
     {
       "info": {
+        "name": "o4-mini",
+        "CoT": "-",
+        "type": "proprietary",
+        "size": "-",
+        "link": "https://openai.com/index/introducing-o3-and-o4-mini/" 
+      },
+      "emma": {
+        "overall": "-",
+        "math": "-",
+        "physics": "-",
+        "chemistry": "-",
+        "coding": "-"
+      },
+      "emma-mini": {
+        "overall": "61.25",
+        "math": "56.00",
+        "physics": "77.00",
+        "chemistry": "58.00",
+        "coding": "54.00"
+      }
+    },
+    {
+      "info": {
         "name": "gemini 2.0 flash",
         "CoT": "false",
         "type": "proprietary",
