@@ -353,7 +353,7 @@
         "link": "https://huggingface.co/TIGER-Lab/VL-Rethinker-72B" 
       },
       "emma": {
-        "overall": "38.9*",
+        "overall": "38.9",
         "math": "-",
         "physics": "-",
         "chemistry": "-",
