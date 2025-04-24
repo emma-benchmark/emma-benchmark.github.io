@@ -346,6 +346,29 @@
     },
     {
       "info": {
+        "name": "VL-Rethinker-72B",
+        "CoT": "-",
+        "type": "open_source",
+        "size": "72B",
+        "link": "https://huggingface.co/TIGER-Lab/VL-Rethinker-72B" 
+      },
+      "emma": {
+        "overall": "-",
+        "math": "-",
+        "physics": "-",
+        "chemistry": "-",
+        "coding": "-"
+      },
+      "emma-mini": {
+        "overall": "38.9*",
+        "math": "-",
+        "physics": "-",
+        "chemistry": "-",
+        "coding": "-"
+      }
+    },
+    {
+      "info": {
         "name": "qwen2-vl-72b-instruct",
         "CoT": "true",
         "type": "open_source",
