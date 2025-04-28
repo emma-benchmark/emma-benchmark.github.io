@@ -546,28 +546,3 @@ body {
   height: auto;
 }
 
-<style>
-  /* make the copy button larger */
-  #copyBibtexBtn {
-    font-size: 1.2rem;
-    padding: 0.75rem 1rem;
-  }
-
-  /* slim scrollbar on the BibTeX block */
-  #BibTeX pre {
-    /* Firefox */
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0,0,0,0.3) transparent;
-  }
-  /* Webkit browsers */
-  #BibTeX pre::-webkit-scrollbar {
-    height: 6px;
-  }
-  #BibTeX pre::-webkit-scrollbar-thumb {
-    background-color: rgba(0,0,0,0.3);
-    border-radius: 3px;
-  }
-  #BibTeX pre::-webkit-scrollbar-track {
-    background: transparent;
-  }
-</style>
