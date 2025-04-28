@@ -313,3 +313,261 @@ body {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
 }
+/* ========= Interactive Module 重新排版 ========= */
+
+/* 如果只想加粗那三个控件的 label，而不是右侧 pre 上的所有文字，可改成： */
+#interactive-module button#refreshQuestion .icon + span,
+#interactive-module .select select {
+  font-weight: 600;
+}
+
+/* ─── 2) 缩小左右列 gutter ─── */
+#interactive-module .columns.is-variable.is-8 {
+  /* 默认大约是 2rem，这里改成 1rem */
+  --columnGap: 0rem;
+  column-gap: var(--columnGap);
+}
+
+
+/* ▸ 左侧两块 box 间距 */
+/* 确保 sketch-area 内部垂直堆叠 */
+#interactive-module .sketch-area {
+  display: flex;
+  flex-direction: column;  /* 竖直排列 */
+  align-items: center;     /* 水平居中对齐所有子元素 */
+  gap: 0.75rem;            /* 子元素之间留白 */
+}
+
+/* 标题和答案撑满父容器宽度 */
+/* ─── 3) Human sketch 标题加粗并放大 ─── */
+#interactive-module .sketch-area .subtitle.is-6 {
+  font-weight: 600;     /* 加粗 */
+  font-size: 1.125rem;  /* 相当于 is-5 略小 */
+  margin-bottom: 0rem;  /* 保留下方间距 */
+}
+
+#interactive-module .sketch-area p.has-text-centered {
+  width: 100%;
+  text-align: center;
+}
+
+/* 图片宽度 100%，高度自适应 */
+#interactive-module .sketch-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* ▸ Question 区域图片：更抢眼、更高 */
+#interactive-module .question-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 420px;        /* 需要更大可自行调高 */
+  object-fit: contain;
+}
+
+/* ▸ Sketch 区域图片：略小但完整 */
+#interactive-module .sketch-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 420px;        /* 适度即可 */
+  object-fit: contain;
+}
+
+/* ▸ 题干文字：行距略窄，别抢画面注意力 */
+#interactive-module #questionText {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0.75rem;
+}
+
+/* ─── 1) 取消强制 max-height，让 box 真正拉满 ─── */
+#interactive-module .model-output-box {
+  max-height: none;     /* 取消之前的 600px 限制 */
+  height: 100%;         /* 拉满右侧 column 的高度 */
+  overflow-y: auto;     /* 如果内容溢出，就滚动显示 */
+}
+
+/* ─── 2) 确保右侧的 pre 依然能撑满整个 box ─── */
+#interactive-module .model-output-box pre {
+  flex: 1;              /* 已经在 flex 容器里，这里保持填充 */
+}
+
+/* ─── 调小右侧 Model 输出的字体 ─── */
+#interactive-module .model-output-box pre {
+  font-size: 0.98rem;     /* 根据需要也可以改为 0.85rem 或 14px */
+  line-height: 1.4;      /* 稍紧凑一点 */
+}
+
+/* 可选：给滚动条加点样式，看起来更细致 */
+#interactive-module .model-output-box::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;  /* 如果有水平滚动条，可以设置它的高度 */
+}
+#interactive-module .model-output-box::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+
+/* ==== 大号按钮和下拉 (对应 is-medium) ==== */
+#interactive-module .button.is-medium {
+  /* Bulma 默认已经放大，这里可进一步微调 */
+  font-size: 1.1rem;
+  padding: 0.75rem 1.25rem;
+}
+
+#interactive-module .select.is-medium select {
+  font-size: 1.1rem;
+  padding: 0.75rem 1rem;
+}
+
+/* ====== 布局：左右列同高 ====== */
+#interactive-module .height-sync {            /* 父 columns */
+  align-items: stretch;                       /* 两列等高 */
+}
+
+#interactive-module .left-stack {
+  display: flex;
+  flex-direction: column;       /* 竖直堆叠两盒子 */
+  justify-content: space-between; /* 上盒子顶上、下盒子贴底 */
+}
+
+
+#interactive-module .right-stretch {
+  display: flex;                              /* 让内部 box 自动拉满 */
+  flex-direction: column;
+}
+
+#interactive-module .right-stretch .model-output-box {
+  flex: 1 0 auto;                             /* 占满整列高度 */
+  display: flex;
+}
+
+#interactive-module .model-output-box pre {
+  flex: 1;                                    /* 让 <pre> 填充 box */
+  overflow: auto;
+}
+
+/* ====== Question 区域：图片置顶文字下 ====== */
+#interactive-module .question-area {
+  display: flex;
+  flex-direction: column;                     /* 图片在上，文字在下 */
+}
+
+#interactive-module .question-figure img,
+#interactive-module .sketch-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* 可按需要调节最大高度 */
+#interactive-module .question-figure img { max-height: 420px; }
+#interactive-module .sketch-figure img   { max-height: 320px; }
+
+/* 文字稍收敛，避免抢焦点 */
+#interactive-module #questionText {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0.75rem;
+}
+
+
+/* ====== 布局：左右列同高 ====== */
+#interactive-module .height-sync {
+  align-items: stretch;             /* Bulma columns 同高 */
+}
+
+#interactive-module .left-stack {
+  display: flex;                    /* 竖直排列两块 box */
+  flex-direction: column;
+  justify-content: space-between;   /* ← 关键：上下两个子 box 分别贴顶贴底 */
+}
+
+#interactive-module .right-stretch {
+  display: flex;                    
+  flex-direction: column;
+}
+#interactive-module .right-stretch .model-output-box {
+  flex: 1 0 auto;                   /* 拉满整列高度 */
+  display: flex;
+}
+#interactive-module .model-output-box pre {
+  flex: 1;
+  overflow: auto;
+}
+
+
+/* 1) 父 columns 同高 */
+#interactive-module .height-sync {
+  align-items: stretch;
+}
+
+/* 2) 左侧两盒子：Question-area 顶上，Sketch-area 推底 */
+#interactive-module .left-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 3) Sketch-area 自身也撑满高度，内部标题顶、答案底 */
+#interactive-module .left-stack .sketch-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+/* 让内容自动分段，并有行高和段落间距 */
+#interactive-module .question-text p {
+  margin: 0 0 1rem;
+  line-height: 1.6;
+}
+
+/* 如果想把 A/B/C/D 选项渲染成列表，用这个 */
+#interactive-module .question-text ul {
+  list-style: disc inside;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+/* 占位 <image_1> 渲染后的 <img> */
+#interactive-module .question-text img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+  height: auto;
+}
+
+<style>
+  /* make the copy button larger */
+  #copyBibtexBtn {
+    font-size: 1.2rem;
+    padding: 0.75rem 1rem;
+  }
+
+  /* slim scrollbar on the BibTeX block */
+  #BibTeX pre {
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0,0,0,0.3) transparent;
+  }
+  /* Webkit browsers */
+  #BibTeX pre::-webkit-scrollbar {
+    height: 6px;
+  }
+  #BibTeX pre::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 3px;
+  }
+  #BibTeX pre::-webkit-scrollbar-track {
+    background: transparent;
+  }
+</style>

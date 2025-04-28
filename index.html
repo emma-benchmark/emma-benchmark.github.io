@@ -536,9 +536,73 @@
   </div>
 </section>
 
+
+<section id="interactive-module" class="section">
+  <div class="container is-max-desktop">
+    <!-- 顶部工具栏（不变） -->
+    <h2 class="title is-3 has-text-centered mb-5">Human Sketch vs Model Response</h2>
+    <div class="columns is-variable is-2 mb-5">
+      <div class="column is-4">
+        <button id="refreshQuestion" class="button is-primary is-large is-fullwidth">
+          <span class="icon"><i class="fas fa-sync-alt"></i></span><span>Refresh Question</span>
+        </button>
+      </div>
+      <div class="column is-4">
+        <div class="select is-large is-fullwidth"><select id="questionSelect"></select></div>
+      </div>
+      <div class="column is-4">
+        <div class="select is-large is-fullwidth"><select id="modelSelect"></select></div>
+      </div>
+    </div>
+
+    <!-- 主体：左右两栏，高度同步 -->
+    <div class="columns is-variable is-8 height-sync">
+      <!-- █ 左侧：两块垂直堆叠 -->
+      <div class="column is-half left-stack">
+        <!-- Question -->
+        <div class="box question-area">
+          <figure class="question-figure">
+            <img id="questionImage" src="" alt="Question image">
+          </figure>
+          <!-- <p id="questionText" class="subtitle is-5 mt-3 mb-0"></p> -->
+          <!-- Bulma 的 .content 会给段落自动加上下间距 -->
+        <div id="questionText" class="question-text content"></div>
+        </div>
+        <!-- Sketch 区域 -->
+        <div class="box sketch-area">
+          <!-- 1) 小标题 居中 -->
+          <p class="subtitle is-6 has-text-centered mb-2">Human sketch</p>
+          
+          <!-- 2) 图片 -->
+          <figure class="sketch-figure">
+            <img id="sketchImage" src="" alt="Sketch image">
+          </figure>
+          
+          <!-- 3) 答案 -->
+          <p id="answerText" class="has-text-centered mt-3"><strong></strong></p>
+
+        </div>
+
+
+      </div>
+
+      <!-- █ 右侧：拉伸同高 -->
+      <div class="column is-half right-stretch">
+        <div class="box model-output-box">
+          <pre id="modelContent" class="content"></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 <!-- Lightbox.js -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+
 
 
 <section class="section" id="interactive-questions">
@@ -860,22 +924,50 @@
   }
 </script>
 
+
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>
-      @article{hao2025can,
-      title={Can MLLMs Reason in Multimodality? EMMA: An Enhanced MultiModal ReAsoning Benchmark},
-      author={Hao, Yunzhuo and Gu, Jiawei and Wang, Huichen Will and Li, Linjie and Yang, Zhengyuan and Wang, Lijuan and Cheng, Yu},
-      journal={arXiv preprint arXiv:2501.05444},
-      year={2025}
-    }
-</code></pre>
+    <div class="box" style="position: relative; margin-top: 2.5rem;">
+
+      <!-- 更大的复制按钮 -->
+      <button
+        id="copyBibtexBtn"
+        class="button is-normal is-info is-rounded"
+        aria-label="Copy BibTeX"
+        style="position: absolute; top: 0.5rem; right: 0.5rem;"
+      >
+        <span class="icon"><i class="fas fa-copy"></i></span>
+      </button>
+
+      <!-- 去掉多余的换行和缩进 -->
+      <pre style="overflow-x: auto;"><code id="bibtexCode">@article{hao2025can,
+  title={Can MLLMs Reason in Multimodality? EMMA: An Enhanced MultiModal ReAsoning Benchmark},
+  author={Hao, Yunzhuo and Gu, Jiawei and Wang, Huichen Will and Li, Linjie and Yang, Zhengyuan and Wang, Lijuan and Cheng, Yu},
+  journal={arXiv preprint arXiv:2501.05444},
+  year={2025}
+}</code></pre>
+
+    </div>
   </div>
 </section>
-<div id="visitor-map" style="width: 300px; height: 300px; overflow: hidden; margin: 0 auto;">
-  <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=a1QOM1qrYlJkVcSpw9uGto-GDGARlIwpS5LWLZjHCE8&cl=ffffff&w=a"></script>
-</div>
+
+<script>
+  document.getElementById('copyBibtexBtn').addEventListener('click', async () => {
+    const code = document.getElementById('bibtexCode').innerText.trim();
+    try {
+      await navigator.clipboard.writeText(code);
+      // You can replace this with a Toast, Tooltip, or Bulma notification
+      alert('BibTeX copied to clipboard!');
+    } catch (err) {
+      console.error('Copy failed', err);
+      alert('Copy failed, please copy manually.');
+    }
+  });
+</script>
+
+
+
 
 <footer class="footer">
   <div class="container">

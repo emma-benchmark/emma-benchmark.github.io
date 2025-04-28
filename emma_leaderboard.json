@@ -24,7 +24,7 @@
     },
     {
       "info": {
-        "name": "human expert",
+        "name": "Human Expert (Medium)",
         "CoT": "-",
         "type": "human_expert",
         "size": "-",
@@ -38,11 +38,34 @@
         "coding": "-"
       },
       "emma-mini": {
-        "overall": "77.75",
-        "math": "75.00",
-        "physics": "64.50",
-        "chemistry": "86.00",
-        "coding": "85.50"
+        "overall": "77.50",
+        "math": "80.00",
+        "physics": "66.00",
+        "chemistry": "78.00",
+        "coding": "85.00"
+      }
+    },
+    {
+      "info": {
+        "name": "Human Expert (High)",
+        "CoT": "-",
+        "type": "human_expert",
+        "size": "-",
+        "link": "https://emma-benchmark.github.io/"
+      },
+      "emma": {
+        "overall": "-",
+        "math": "-",
+        "physics": "-",
+        "chemistry": "-",
+        "coding": "-"
+      },
+      "emma-mini": {
+        "overall": "91.75",
+        "math": "88.00",
+        "physics": "97.00",
+        "chemistry": "96.00",
+        "coding": "86.00"
       }
     },
     {
@@ -503,6 +526,29 @@
         "physics": "63.00",
         "chemistry": "47.00",
         "coding": "48.00"
+      }
+    },
+    {
+      "info": {
+        "name": "gemini-2.5-pro-exp-03-25",
+        "CoT": "-",
+        "type": "proprietary",
+        "size": "-",
+        "link": "https://ai.google.dev/"
+      },
+      "emma": {
+        "overall": "-",
+        "math": "-",
+        "physics": "-",
+        "chemistry": "-",
+        "coding": "-"
+      },
+      "emma-mini": {
+        "overall": "70.75",
+        "math": "60.00",
+        "physics": "81.00",
+        "chemistry": "71.00",
+        "coding": "71.00"
       }
     },
     {
