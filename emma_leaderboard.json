@@ -24,7 +24,7 @@
     },
     {
       "info": {
-        "name": "Human Expert (Medium)",
+        "name": "Human Expert (Low)",
         "CoT": "-",
         "type": "human_expert",
         "size": "-",
@@ -114,6 +114,29 @@
         "coding": "54.00"
       }
     },
+    // {
+    //   "info": {
+    //     "name": "o3",
+    //     "CoT": "-",
+    //     "type": "proprietary",
+    //     "size": "-",
+    //     "link": "https://openai.com/index/introducing-o3-and-o4-mini/" 
+    //   },
+    //   "emma": {
+    //     "overall": "-",
+    //     "math": "-",
+    //     "physics": "-",
+    //     "chemistry": "-",
+    //     "coding": "-"
+    //   },
+    //   "emma-mini": {
+    //     "overall": "59.25",
+    //     "math": "48.00",
+    //     "physics": "76.00",
+    //     "chemistry": "64.00",
+    //     "coding": "49.00"
+    //   }
+    // },
     {
       "info": {
         "name": "gemini 2.0 flash",
