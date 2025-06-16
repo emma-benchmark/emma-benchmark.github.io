@@ -415,6 +415,75 @@
     },
     {
       "info": {
+        "name": "SRPO-7B",
+        "CoT": "-",
+        "type": "open_source",
+        "size": "7B",
+        "link": "https://srpo.pages.dev/" 
+      },
+      "emma": {
+        "overall": "29.6*",
+        "math": "-",
+        "physics": "-",
+        "chemistry": "-",
+        "coding": "-"
+      },
+      "emma-mini": {
+        "overall": "-",
+        "math": "-",
+        "physics": "-",
+        "chemistry": "-",
+        "coding": "-"
+      }
+    },
+    {
+      "info": {
+        "name": "SRPO-32B",
+        "CoT": "-",
+        "type": "open_source",
+        "size": "32B",
+        "link": "https://srpo.pages.dev/" 
+      },
+      "emma": {
+        "overall": "38.2*",
+        "math": "-",
+        "physics": "-",
+        "chemistry": "-",
+        "coding": "-"
+      },
+      "emma-mini": {
+        "overall": "-",
+        "math": "-",
+        "physics": "-",
+        "chemistry": "-",
+        "coding": "-"
+      }
+    },
+    {
+      "info": {
+        "name": "Skywork-R1V2-38B",
+        "CoT": "-",
+        "type": "open_source",
+        "size": "38B",
+        "link": "https://huggingface.co/Skywork/Skywork-R1V2-38B" 
+      },
+      "emma": {
+        "overall": "-",
+        "math": "-",
+        "physics": "-",
+        "chemistry": "-",
+        "coding": "-"
+      },
+      "emma-mini": {
+        "overall": "36.25",
+        "math": "33.00",
+        "physics": "52.00",
+        "chemistry": "29.00",
+        "coding": "31.00"
+      }
+    },
+    {
+      "info": {
         "name": "qwen2-vl-72b-instruct",
         "CoT": "true",
         "type": "open_source",
