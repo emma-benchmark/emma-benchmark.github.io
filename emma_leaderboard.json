@@ -645,6 +645,29 @@
     },
     {
       "info": {
+        "name": "gemini-2.5-pro(06-05)",
+        "CoT": "-",
+        "type": "proprietary",
+        "size": "-",
+        "link": "https://ai.google.dev/"
+      },
+      "emma": {
+        "overall": "-",
+        "math": "-",
+        "physics": "-",
+        "chemistry": "-",
+        "coding": "-"
+      },
+      "emma-mini": {
+        "overall": "69.5",
+        "math": "51.00",
+        "physics": "84.00",
+        "chemistry": "67.00",
+        "coding": "76.00"
+      }
+    },
+    {
+      "info": {
         "name": "o1",
         "CoT": "-",
         "type": "proprietary",
