@@ -484,6 +484,29 @@
     },
     {
       "info": {
+        "name": "Skywork-R1V3-38B",
+        "CoT": "-",
+        "type": "open_source",
+        "size": "38B",
+        "link": "https://huggingface.co/Skywork/Skywork-R1V3-38B" 
+      },
+      "emma": {
+        "overall": "-",
+        "math": "-",
+        "physics": "-",
+        "chemistry": "-",
+        "coding": "-"
+      },
+      "emma-mini": {
+        "overall": "40.25",
+        "math": "33.00",
+        "physics": "46.00",
+        "chemistry": "40.00",
+        "coding": "42.00"
+      }
+    },
+    {
+      "info": {
         "name": "qwen2-vl-72b-instruct",
         "CoT": "true",
         "type": "open_source",
