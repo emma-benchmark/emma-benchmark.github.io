@@ -691,6 +691,29 @@
     },
     {
       "info": {
+        "name": "gemini-3-pro-preview",
+        "CoT": "-",
+        "type": "proprietary",
+        "size": "-",
+        "link": "https://ai.google.dev/"
+      },
+      "emma": {
+        "overall": "-",
+        "math": "-",
+        "physics": "-",
+        "chemistry": "-",
+        "coding": "-"
+      },
+      "emma-mini": {
+        "overall": "69.25",
+        "math": "68.00",
+        "physics": "77.00",
+        "chemistry": "52.00",
+        "coding": "80.00"
+      }
+    },
+    {
+      "info": {
         "name": "o1",
         "CoT": "-",
         "type": "proprietary",
